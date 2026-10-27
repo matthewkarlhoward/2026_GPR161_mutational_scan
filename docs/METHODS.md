@@ -1,8 +1,7 @@
 # Methods — as implemented in this repository
 
-This file describes what the code does and what the committed data are. It is written to
-be checkable against the files, not as manuscript prose. Anything that could not be
-established from the files in this repository is marked **[CONFIRM]** rather than
+What the code does and what the committed data are, written to be checkable against the
+files. Anything not establishable from those files is marked **[CONFIRM]** rather than
 guessed.
 
 ---

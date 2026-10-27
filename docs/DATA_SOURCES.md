@@ -12,14 +12,12 @@ manager. ❓ = needs you (in-house method, or several papers could serve).
 
 ## 1. Software and methods used to produce this dataset
 
-The data in `data/` — the library, the counts and the scores — was generated for the
-accompanying paper. Nothing in this section is a source of that data; these are the
-tools it was made and analysed with, and they are cited as such.
+The library, counts and scores in `data/` were generated for the accompanying paper;
+the tools below are cited as methods, not as sources of that data.
 
 ### Library design and cloning — DIMPLE ✅
-Used as: the method by which the 11,043-variant oligo pool in
-`data/library/GPR161_oligos.csv` was designed and assembled for this study. The DIMPLE
-paper describes the approach; the GPR161 library is this study's own.
+The method the 11,043-variant oligo pool in `data/library/GPR161_oligos.csv` was designed
+and assembled with.
 
 > Macdonald, C. B., Nedrud, D., Grimes, P. R., Trinidad, D., Fraser, J. S. &
 > Coyote-Maestas, W. DIMPLE: deep insertion, deletion, and missense mutation libraries
@@ -27,9 +25,7 @@ paper describes the approach; the GPR161 library is this study's own.
 > *Genome Biology* **24**, 36 (2023). doi:10.1186/s13059-023-02880-6. PMID 36829241.
 
 ### Variant-effect scoring — Lilace ✅
-Used as: the software fitted to this study's FACS bin counts to produce `data/scores/`.
-The scores are this study's measurements of GPR161; Lilace is the estimator applied to
-them, and is cited for the method only.
+The model fitted to this study's FACS bin counts to produce `data/scores/`.
 
 > Freudenberg, J., Rao, J., Howard, M. K., Macdonald, C., Greenwald, N. F.,
 > Coyote-Maestas, W. & Pimentel, H. Accurate variant effect estimation in FACS-based deep
@@ -38,11 +34,11 @@ them, and is cited for the method only.
 > 10.1101/2025.06.24.661380.
 
 ### Read processing — Dumpling ✅
-Used as: the pipeline that turned this study's FASTQ into the per-variant counts in
-`data/counts/`. Dumpling is a Snakemake pipeline (BBDuk → BBMerge → BBMap → GATK →
-tabulation against the designed variants), released with the Rosace paper and public at
-<https://github.com/odcambc/dumpling>. The configuration and construct reference for this
-run are committed at `pipeline/dumpling/`. Cite Rosace for the pipeline:
+The pipeline that turned this study's FASTQ into the per-variant counts in `data/counts/`:
+a Snakemake workflow (BBDuk → BBMerge → BBMap → GATK → tabulation against the designed
+variants), released with the Rosace paper and public at
+<https://github.com/odcambc/dumpling>. This run's configuration and construct reference
+are committed at `pipeline/dumpling/`. Cite Rosace for the pipeline:
 
 > Rao, J., Xin, R., Macdonald, C., Howard, M. K., Estevam, G. O., Yee, S. W., Wang, M.,
 > Fraser, J. S., Coyote-Maestas, W. & Pimentel, H. Rosace: a robust deep mutational
@@ -54,7 +50,7 @@ files. Dumpling is cited here for read processing only: the scores in `data/scor
 from Lilace, not from the Enrich2 or Rosace scoring the pipeline can also run.
 
 ### Scientific Python stack ⚠️
-`numpy`, `pandas`, `scipy` and `matplotlib` are imported directly; `Pillow` is pinned
+`numpy`, `pandas`, `scipy` and `matplotlib`, imported directly; `Pillow` is pinned
 because matplotlib writes PNGs through it.
 Versions are pinned in `requirements.txt`; cite as your journal requires.
 

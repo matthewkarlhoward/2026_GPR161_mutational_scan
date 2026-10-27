@@ -9,7 +9,10 @@ HEK293T cells.
 Everything here rebuilds from the files in `data/`: the variant tables, the position
 table, the QC tables and every data panel of the figures.
 
-> **Scope.** This repository currently carries what is needed to reproduce GPR161-related work. The pooled human GPCRome basal-cAMP survey that accompanies this work has its own repository: https://github.com/matthewkarlhoward/2026_GPCRome_basal_cAMP. 
+> **Scope.** This repository currently carries what is needed to reproduce
+> GPR161-related work. The pooled human GPCRome basal-cAMP survey that accompanies this
+> work has its own repository:
+> <https://github.com/matthewkarlhoward/2026_GPCRome_basal_cAMP>.
 
 ---
 
@@ -95,8 +98,8 @@ cloned with.
 > exploring protein variation in evolution, disease, and biology. *Genome Biology* **24**,
 > 36 (2023). doi:[10.1186/s13059-023-02880-6](https://doi.org/10.1186/s13059-023-02880-6)
 
-**Variant-effect scoring** — Lilace, the model fitted to this study's bin counts to produce
-`data/scores/`.
+**Variant-effect scoring** — Lilace, the model fitted to this study's bin counts to
+produce `data/scores/`.
 
 > Freudenberg, J., Rao, J., Howard, M. K., Macdonald, C., Greenwald, N. F.,
 > Coyote-Maestas, W. & Pimentel, H. Accurate variant effect estimation in FACS-based deep
@@ -105,8 +108,8 @@ cloned with.
 
 **Topology diagram and generic numbering** — third-party data redistributed in
 `data/annotation/`, used for the snake plot in Figure 2 and the `bw` column of the
-position table. Cite all three if the generic
-numbers or the snake plot appear in a figure; the first two are what GPCRdb asks for.
+position table. Cite all three if the generic numbers or the snake plot appear in a
+figure; the first two are what GPCRdb asks for.
 
 > Taracena Herrera, L. P. *et al.* GPCRdb in 2025: adding odorant receptors, data mapper,
 > structure similarity search and models of physiological ligand complexes. *Nucleic Acids
@@ -144,8 +147,9 @@ mutants this scan is benchmarked against
 **Software** — `numpy`, `pandas`, `scipy`, `matplotlib`, `pillow`; versions pinned in
 [`requirements.txt`](requirements.txt).
 
-**Read processing** — Dumpling, the pipeline that turned this study's FASTQ into `data/counts/`.
-Its configuration and construct reference are committed at `pipeline/dumpling/`.
+**Read processing** — Dumpling, the pipeline that turned this study's FASTQ into
+`data/counts/`. Its configuration and construct reference are committed at
+`pipeline/dumpling/`.
 
 > Rao, J., Xin, R., Macdonald, C., Howard, M. K., Estevam, G. O., Yee, S. W., Wang, M.,
 > Fraser, J. S., Coyote-Maestas, W. & Pimentel, H. Rosace: a robust deep mutational

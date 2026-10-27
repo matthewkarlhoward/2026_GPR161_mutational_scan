@@ -1,20 +1,17 @@
 cff-version: 1.2.0
 message: If you use this dataset or code, please cite it using these metadata.
-title: >-
-  GPR161 deep mutational scan: cell-surface expression, whole-cell abundance and
-  basal cAMP signalling
+title: GPR161 deep mutational scan
 type: dataset
 abstract: >-
-  Data, processing pipeline and figure code for a saturation mutagenesis study of
-  human GPR161. A library of 11,043 designed variants (missense,
-  synonymous and single-residue deletions) across 528 positions was read out in
-  three parallel FACS assays - cell-surface expression, whole-cell abundance and
-  basal cAMP signalling - in HEK293T cells. The library was built for this study using
-  the DIMPLE method, reads were processed with the Dumpling pipeline, and variant
-  effects were estimated from the FACS bin counts with Lilace; the data is original to
-  the accompanying paper. The repository
-  holds the per-sample counts, the per-assay score tables, the pipeline that builds
-  the variant and position tables from them, and the code for the figure panels.
+  Data, processing pipeline and figure code for a saturation mutagenesis study of human
+  GPR161. A library of 11,043 designed variants - missense, synonymous and
+  single-residue deletions across 528 positions - was read out in three parallel FACS
+  assays (cell-surface expression, whole-cell abundance, basal cAMP signalling) in
+  HEK293T cells. The library was built for this study with the DIMPLE method, reads were
+  processed with the Dumpling pipeline, and variant effects were estimated from the FACS
+  bin counts with Lilace; the data is original to the accompanying paper. The repository
+  holds the per-sample counts, the per-assay score tables, the pipeline that builds the
+  variant and position tables from them, and the code for the figure panels.
 authors:
   - family-names: Howard
     given-names: Matthew K.
