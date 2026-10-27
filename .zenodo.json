@@ -1,0 +1,45 @@
+{
+  "upload_type": "dataset",
+  "title": "GPR161 deep mutational scan: cell-surface expression, whole-cell abundance and basal cAMP signalling",
+  "description": "<p>Data, processing pipeline and figure code for a saturation mutagenesis study of human GPR161 (UniProt Q8N6U8). A library of 11,043 designed variants &mdash; missense, synonymous and single-residue deletions across 528 positions &mdash; was built for this study with the DIMPLE method and read out in three parallel FACS assays (cell-surface expression, whole-cell abundance, basal cAMP signalling) in HEK293T cells. Reads were processed into per-variant counts with the Dumpling pipeline, and variant effects were estimated from the FACS bin counts with Lilace. The library, the counts and the scores are original to the accompanying paper; DIMPLE and Lilace are the methods used, and are cited as such.</p><p>Contents: per-sample variant counts (78 samples), per-assay Lilace score tables, the pipeline that builds the merged variant table and the position table from them, the code for the published figure panels, and documentation covering methods as implemented, external data sources with citations, a panel-to-script map and a column dictionary.</p><p>Licensing: this record is marked CC BY 4.0, which covers the data, figures, tables and documentation. The source code in pipeline/ and scripts/ is MIT instead (see LICENSE in the archive). The files in data/annotation/, and the two files that carry their content onward, are redistributed from GPCRdb under CC BY 4.0 (see data/annotation/SOURCE.md).</p>",
+  "creators": [
+    {
+      "name": "Howard, Matthew K.",
+      "orcid": "0000-0002-2128-2065"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "deep mutational scanning",
+    "GPR161",
+    "G protein-coupled receptor",
+    "variant effect map",
+    "cAMP signalling",
+    "protein abundance",
+    "cell-surface expression",
+    "multiplexed assay of variant effect"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/matthewkarlhoward/2026_GPR161_mutational_scan",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.1186/s13059-026-03934-1",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1186/s13059-023-02880-6",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1186/s13059-024-03279-7",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    }
+  ]
+}

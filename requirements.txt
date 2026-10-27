@@ -1,0 +1,9 @@
+# Versions this repository was last run and verified with (Python 3.14, macOS).
+# These five are all the figures and the pipeline need; nothing here uses a
+# bleeding-edge API, so older 2.x/1.x releases should work. The code imports the
+# first four directly; pillow is pinned because matplotlib writes the PNGs through it.
+numpy==2.4.3
+pandas==3.0.1
+scipy==1.17.1
+matplotlib==3.10.8
+pillow==12.1.1

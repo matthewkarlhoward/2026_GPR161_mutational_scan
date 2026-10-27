@@ -1,0 +1,10 @@
+assay_label,type,n,median_score,median_se,frac_lfsr05
+Abundance,deletion,501,-0.031,0.292,0.116
+Abundance,missense,9951,0.033,0.295,0.064
+Abundance,synonymous,502,-0.02,0.301,0.002
+Surface,deletion,502,0.089,0.342,0.361
+Surface,missense,9964,0.171,0.344,0.185
+Surface,synonymous,502,-0.009,0.364,0.014
+cAMP,deletion,504,-0.055,0.292,0.379
+cAMP,missense,9967,0.059,0.295,0.165
+cAMP,synonymous,502,-0.025,0.298,0.016

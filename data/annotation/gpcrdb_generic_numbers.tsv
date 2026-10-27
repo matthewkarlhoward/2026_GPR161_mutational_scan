@@ -1,0 +1,530 @@
+position	wt	gpcrdb_segment	gpcrdb_generic	gpcrdb_bw	our_bw	agrees
+1	M	N-term				False
+2	S	N-term				False
+3	L	N-term				False
+4	N	N-term				False
+5	S	N-term				False
+6	S	N-term				False
+7	L	N-term				False
+8	S	N-term				False
+9	C	N-term				False
+10	R	N-term				False
+11	K	N-term				False
+12	E	N-term				False
+13	L	N-term				False
+14	S	N-term				False
+15	N	N-term				False
+16	L	N-term				False
+17	T	N-term				False
+18	E	N-term				False
+19	E	N-term				False
+20	E	N-term				False
+21	G	N-term				False
+22	G	N-term				False
+23	E	TM1	1.28x28	1.28		False
+24	G	TM1	1.29x29	1.29		False
+25	G	TM1	1.30x30	1.30		False
+26	V	TM1	1.31x31	1.31		False
+27	I	TM1	1.32x32	1.32		False
+28	I	TM1	1.33x33	1.33		False
+29	T	TM1	1.34x34	1.34		False
+30	Q	TM1	1.35x35	1.35		False
+31	F	TM1	1.36x36	1.36		False
+32	I	TM1	1.37x37	1.37	1.37	True
+33	A	TM1	1.38x38	1.38	1.38	True
+34	I	TM1	1.39x39	1.39	1.39	True
+35	I	TM1	1.40x40	1.40	1.40	True
+36	V	TM1	1.41x41	1.41	1.41	True
+37	I	TM1	1.42x42	1.42	1.42	True
+38	T	TM1	1.43x43	1.43	1.43	True
+39	I	TM1	1.44x44	1.44	1.44	True
+40	F	TM1	1.45x45	1.45	1.45	True
+41	V	TM1	1.46x46	1.46	1.46	True
+42	C	TM1	1.47x47	1.47	1.47	True
+43	L	TM1	1.48x48	1.48	1.48	True
+44	G	TM1	1.49x49	1.49	1.49	True
+45	N	TM1	1.50x50	1.50	1.50	True
+46	L	TM1	1.51x51	1.51	1.51	True
+47	V	TM1	1.52x52	1.52	1.52	True
+48	I	TM1	1.53x53	1.53	1.53	True
+49	V	TM1	1.54x54	1.54	1.54	True
+50	V	TM1	1.55x55	1.55	1.55	True
+51	T	TM1	1.56x56	1.56	1.56	True
+52	L	TM1	1.57x57	1.57	1.57	True
+53	Y	TM1	1.58x58	1.58	1.58	True
+54	K	TM1	1.59x59	1.59	1.59	True
+55	K	TM1	1.60x60	1.60	1.60	True
+56	S	ICL1	12.48x48	12.48	1.61	False
+57	Y	ICL1	12.49x49	12.49	1.62	False
+58	L	ICL1	12.50x50	12.50	1.63	False
+59	L	ICL1	12.51x51	12.51	TM2	False
+60	T	TM2	2.37x37	2.37	TM2	False
+61	L	TM2	2.38x38	2.38	TM2	False
+62	S	TM2	2.39x39	2.39	TM2	False
+63	N	TM2	2.40x40	2.40	TM2	False
+64	K	TM2	2.41x41	2.41	TM2	False
+65	F	TM2	2.42x42	2.42	TM2	False
+66	V	TM2	2.43x43	2.43	TM2	False
+67	F	TM2	2.44x44	2.44	TM2	False
+68	S	TM2	2.45x45	2.45	TM2	False
+69	L	TM2	2.46x46	2.46	TM2	False
+70	T	TM2	2.47x47	2.47	TM2	False
+71	L	TM2	2.48x48	2.48	TM2	False
+72	S	TM2	2.49x49	2.49	TM2	False
+73	N	TM2	2.50x50	2.50	TM2	False
+74	F	TM2	2.51x51	2.51	TM2	False
+75	L	TM2	2.52x52	2.52	TM2	False
+76	L	TM2	2.53x53	2.53	TM2	False
+77	S	TM2	2.54x54	2.54	TM2	False
+78	V	TM2	2.55x55	2.55	TM2	False
+79	L	TM2	2.56x551	2.56	TM2	False
+80	V	TM2	2.57x56	2.57	TM2	False
+81	L	TM2	2.58x57	2.58	TM2	False
+82	P	TM2	2.59x58	2.59	TM2	False
+83	F	TM2	2.60x59	2.60	TM2	False
+84	V	TM2	2.61x60	2.61	TM2	False
+85	V	TM2	2.62x61	2.62	TM2	False
+86	T	TM2	2.63x62	2.63		False
+87	S	TM2	2.64x63	2.64		False
+88	S	TM2	2.65x64	2.65		False
+89	I	TM2	2.66x65	2.66		False
+90	R	TM2	2.67x66	2.67		False
+91	R	TM2	2.68x67	2.68		False
+92	E	ECL1	23.49x49	23.49		False
+93	W	ECL1	23.50x50	23.50		False
+94	I	ECL1	23.51x51	23.51		False
+95	F	ECL1	23.52x52	23.52		False
+96	G	TM3	3.21x21	3.21		False
+97	V	TM3	3.22x22	3.22		False
+98	V	TM3	3.23x23	3.23		False
+99	W	TM3	3.24x24	3.24	3.24	True
+100	C	TM3	3.25x25	3.25	3.25	True
+101	N	TM3	3.26x26	3.26	3.26	True
+102	F	TM3	3.27x27	3.27	3.27	True
+103	S	TM3	3.28x28	3.28	3.28	True
+104	A	TM3	3.29x29	3.29	3.29	True
+105	L	TM3	3.30x30	3.30	3.30	True
+106	L	TM3	3.31x31	3.31	3.31	True
+107	Y	TM3	3.32x32	3.32	3.32	True
+108	L	TM3	3.33x33	3.33	3.33	True
+109	L	TM3	3.34x34	3.34	3.34	True
+110	I	TM3	3.35x35	3.35	3.35	True
+111	S	TM3	3.36x36	3.36	3.36	True
+112	S	TM3	3.37x37	3.37	3.37	True
+113	A	TM3	3.38x38	3.38	3.38	True
+114	S	TM3	3.39x39	3.39	3.39	True
+115	M	TM3	3.40x40	3.40	3.40	True
+116	L	TM3	3.41x41	3.41	3.41	True
+117	T	TM3	3.42x42	3.42	3.42	True
+118	L	TM3	3.43x43	3.43	3.43	True
+119	G	TM3	3.44x44	3.44	3.44	True
+120	V	TM3	3.45x45	3.45	3.45	True
+121	I	TM3	3.46x46	3.46	3.46	True
+122	A	TM3	3.47x47	3.47	3.47	True
+123	I	TM3	3.48x48	3.48	3.48	True
+124	D	TM3	3.49x49	3.49	3.49	True
+125	R	TM3	3.50x50	3.50	3.50	True
+126	Y	TM3	3.51x51	3.51	3.51	True
+127	Y	TM3	3.52x52	3.52	3.52	True
+128	A	TM3	3.53x53	3.53	3.53	True
+129	V	TM3	3.54x54	3.54	3.54	True
+130	L	TM3	3.55x55	3.55	3.55	True
+131	Y	TM3	3.56x56	3.56	3.56	True
+132	P	ICL2	34.50x50	34.50	3.57	False
+133	M	ICL2	34.51x51	34.51	3.58	False
+134	V	ICL2	34.52x52	34.52	3.59	False
+135	Y	ICL2	34.53x53	34.53	3.60	False
+136	P	ICL2	34.54x54	34.54	3.61	False
+137	M	ICL2	34.55x55	34.55	3.62	False
+138	K	ICL2	34.56x56	34.56	3.63	False
+139	I	ICL2	34.57x57	34.57	3.64	False
+140	T	TM4	4.38x38	4.38	3.65	False
+141	G	TM4	4.39x39	4.39	3.66	False
+142	N	TM4	4.40x40	4.40	4.40	True
+143	R	TM4	4.41x41	4.41	4.41	True
+144	A	TM4	4.42x42	4.42	4.42	True
+145	V	TM4	4.43x43	4.43	4.43	True
+146	M	TM4	4.44x44	4.44	4.44	True
+147	A	TM4	4.45x45	4.45	4.45	True
+148	L	TM4	4.46x46	4.46	4.46	True
+149	V	TM4	4.47x47	4.47	4.47	True
+150	Y	TM4	4.48x48	4.48	4.48	True
+151	I	TM4	4.49x49	4.49	4.49	True
+152	W	TM4	4.50x50	4.50	4.50	True
+153	L	TM4	4.51x51	4.51	4.51	True
+154	H	TM4	4.52x52	4.52	4.52	True
+155	S	TM4	4.53x53	4.53	4.53	True
+156	L	TM4	4.54x54	4.54	4.54	True
+157	I	TM4	4.55x55	4.55	4.55	True
+158	G	TM4	4.56x56	4.56	4.56	True
+159	C	TM4	4.57x57	4.57	4.57	True
+160	L	TM4	4.58x58	4.58	4.58	True
+161	P	TM4	4.59x59	4.59	4.59	True
+162	P	TM4	4.60x60	4.60	4.60	True
+163	L	TM4	4.61x61	4.61	4.61	True
+164	F	TM4	4.62x62	4.62	4.62	True
+165	G	TM4	4.63x63	4.63	4.63	True
+166	W	ECL2			4.64	False
+167	S	ECL2			4.65	False
+168	S	ECL2			4.66	False
+169	V	ECL2			4.67	False
+170	E	ECL2			4.68	False
+171	F	ECL2			4.69	False
+172	D	ECL2			4.70	False
+173	E	ECL2				False
+174	F	ECL2				False
+175	K	ECL2				False
+176	W	ECL2				False
+177	M	ECL2				False
+178	C	ECL2	45.50x50	45.50		False
+179	V	ECL2	45.51x51	45.51		False
+180	A	ECL2	45.52x52	45.52		False
+181	A	ECL2				False
+182	W	ECL2				False
+183	H	ECL2				False
+184	R	ECL2				False
+185	E	TM5	5.35x36	5.35		False
+186	P	TM5	5.36x37	5.36		False
+187	G	TM5	5.37x38	5.37		False
+188	Y	TM5	5.38x39	5.38		False
+189	T	TM5	5.39x40	5.39		False
+190	A	TM5	5.40x41	5.40		False
+191	F	TM5	5.41x42	5.41		False
+192	W	TM5	5.42x43	5.42	5.42	True
+193	Q	TM5	5.43x44	5.43	5.43	True
+194	I	TM5	5.44x45	5.44	5.44	True
+195	W	TM5	5.45x46	5.45	5.45	True
+196	C	TM5	5.46x461	5.46	5.46	True
+197	A	TM5	5.47x47	5.47	5.47	True
+198	L	TM5	5.48x48	5.48	5.48	True
+199	F	TM5	5.49x49	5.49	5.49	True
+200	P	TM5	5.50x50	5.50	5.50	True
+201	F	TM5	5.51x51	5.51	5.51	True
+202	L	TM5	5.52x52	5.52	5.52	True
+203	V	TM5	5.53x53	5.53	5.53	True
+204	M	TM5	5.54x54	5.54	5.54	True
+205	L	TM5	5.55x55	5.55	5.55	True
+206	V	TM5	5.56x56	5.56	5.56	True
+207	C	TM5	5.57x57	5.57	5.57	True
+208	Y	TM5	5.58x58	5.58	5.58	True
+209	G	TM5	5.59x59	5.59	5.59	True
+210	F	TM5	5.60x60	5.60	5.60	True
+211	I	TM5	5.61x61	5.61	5.61	True
+212	F	TM5	5.62x62	5.62	5.62	True
+213	R	TM5	5.63x63	5.63	5.63	True
+214	V	TM5	5.64x64	5.64	5.64	True
+215	A	TM5	5.65x65	5.65	5.65	True
+216	R	TM5	5.66x66	5.66	5.66	True
+217	V	TM5	5.67x67	5.67	5.67	True
+218	K	TM5	5.68x68	5.68	5.68	True
+219	A	TM5	5.69x69	5.69	5.69	True
+220	R	TM5	5.70x70	5.70	5.70	True
+221	K	TM5	5.71x71	5.71	5.71	True
+222	V	TM5	5.72x72	5.72	5.72	True
+223	H	TM5	5.73x73	5.73	5.73	True
+224	C	TM5	5.74x74	5.74	5.74	True
+225	G	TM5	5.75x75	5.75		False
+226	T	TM5	5.76x76	5.76		False
+227	V	ICL3				False
+228	V	ICL3				False
+229	I	ICL3				False
+230	V	ICL3				False
+231	E	ICL3				False
+232	E	ICL3				False
+233	D	ICL3				False
+234	A	ICL3				False
+235	Q	ICL3				False
+236	R	ICL3				False
+237	T	ICL3				False
+238	G	ICL3				False
+239	R	ICL3				False
+240	K	ICL3				False
+241	N	ICL3				False
+242	S	ICL3				False
+243	S	ICL3				False
+244	T	ICL3				False
+245	S	ICL3				False
+246	T	ICL3				False
+247	S	ICL3				False
+248	S	ICL3				False
+249	S	ICL3				False
+250	G	ICL3				False
+251	S	ICL3				False
+252	R	ICL3				False
+253	R	ICL3				False
+254	N	ICL3				False
+255	A	ICL3				False
+256	F	ICL3				False
+257	Q	ICL3				False
+258	G	ICL3				False
+259	V	TM6	6.24x24	6.24		False
+260	V	TM6	6.25x25	6.25	6.25	True
+261	Y	TM6	6.26x26	6.26	6.26	True
+262	S	TM6	6.27x27	6.27	6.27	True
+263	A	TM6	6.28x28	6.28	6.28	True
+264	N	TM6	6.29x29	6.29	6.29	True
+265	Q	TM6	6.30x30	6.30	6.30	True
+266	C	TM6	6.31x31	6.31	6.31	True
+267	K	TM6	6.32x32	6.32	6.32	True
+268	A	TM6	6.33x33	6.33	6.33	True
+269	L	TM6	6.34x34	6.34	6.34	True
+270	I	TM6	6.35x35	6.35	6.35	True
+271	T	TM6	6.36x36	6.36	6.36	True
+272	I	TM6	6.37x37	6.37	6.37	True
+273	L	TM6	6.38x38	6.38	6.38	True
+274	V	TM6	6.39x39	6.39	6.39	True
+275	V	TM6	6.40x40	6.40	6.40	True
+276	L	TM6	6.41x41	6.41	6.41	True
+277	G	TM6	6.42x42	6.42	6.42	True
+278	A	TM6	6.43x43	6.43	6.43	True
+279	F	TM6	6.44x44	6.44	6.44	True
+280	M	TM6	6.45x45	6.45	6.45	True
+281	V	TM6	6.46x46	6.46	6.46	True
+282	T	TM6	6.47x47	6.47	6.47	True
+283	W	TM6	6.48x48	6.48	6.48	True
+284	G	TM6	6.49x49	6.49	6.49	True
+285	P	TM6	6.50x50	6.50	6.50	True
+286	Y	TM6	6.51x51	6.51	6.51	True
+287	M	TM6	6.52x52	6.52	6.52	True
+288	V	TM6	6.53x53	6.53	6.53	True
+289	V	TM6	6.54x54	6.54	6.54	True
+290	I	TM6	6.55x55	6.55	6.55	True
+291	A	TM6	6.56x56	6.56	6.56	True
+292	S	TM6	6.57x57	6.57	6.57	True
+293	E	TM6	6.58x58	6.58	6.58	True
+294	A	TM6	6.59x59	6.59	6.59	True
+295	L	TM6	6.60x60	6.60	6.60	True
+296	W	TM6	6.61x61	6.61		False
+297	G	ECL3				False
+298	K	ECL3				False
+299	S	ECL3				False
+300	S	ECL3				False
+301	V	ECL3				False
+302	S	TM7	7.31x30	7.31		False
+303	P	TM7	7.32x31	7.32	7.32	True
+304	S	TM7	7.33x32	7.33	7.33	True
+305	L	TM7	7.34x33	7.34	7.34	True
+306	E	TM7	7.35x34	7.35	7.35	True
+307	T	TM7	7.36x35	7.36	7.36	True
+308	W	TM7	7.37x36	7.37	7.37	True
+309	A	TM7	7.38x37	7.38	7.38	True
+310	T	TM7	7.39x38	7.39	7.39	True
+311	W	TM7	7.40x39	7.40	7.40	True
+312	L	TM7	7.41x40	7.41	7.41	True
+313	S	TM7	7.42x41	7.42	7.42	True
+314	F	TM7	7.43x42	7.43	7.43	True
+315	A	TM7	7.44x43	7.44	7.44	True
+316	S	TM7	7.45x45	7.45	7.45	True
+317	A	TM7	7.46x46	7.46	7.46	True
+318	V	TM7	7.47x47	7.47	7.47	True
+319	C	TM7	7.48x48	7.48	7.48	True
+320	H	TM7	7.49x49	7.49	7.49	True
+321	P	TM7	7.50x50	7.50	7.50	True
+322	L	TM7	7.51x51	7.51	7.51	True
+323	I	TM7	7.52x52	7.52	7.52	True
+324	Y	TM7	7.53x53	7.53	7.53	True
+325	G	TM7	7.54x54	7.54	7.54	True
+326	L	TM7	7.55x55	7.55	7.55	True
+327	W	TM7	7.56x56	7.56	7.56	True
+328	N	H8	8.47x47	8.47	7.57	False
+329	K	H8	8.48x48	8.48	7.58	False
+330	T	H8	8.49x49	8.49	7.59	False
+331	V	H8	8.50x50	8.50	8.50	True
+332	R	H8	8.51x51	8.51	8.51	True
+333	K	H8	8.52x52	8.52	8.52	True
+334	E	H8	8.53x53	8.53	8.53	True
+335	L	H8	8.54x54	8.54	8.54	True
+336	L	H8	8.55x55	8.55	8.55	True
+337	G	H8	8.56x56	8.56	8.56	True
+338	M	H8	8.57x57	8.57	8.57	True
+339	C	H8	8.58x58	8.58	8.58	True
+340	F	C-term			8.59	False
+341	G	C-term			8.60	False
+342	D	C-term			8.61	False
+343	R	C-term			8.62	False
+344	Y	C-term			8.63	False
+345	Y	C-term			8.64	False
+346	R	C-term			8.65	False
+347	E	C-term			8.66	False
+348	P	C-term			8.67	False
+349	F	C-term				False
+350	V	C-term				False
+351	Q	C-term				False
+352	R	C-term				False
+353	Q	C-term				False
+354	R	C-term				False
+355	T	C-term				False
+356	S	C-term				False
+357	R	C-term				False
+358	L	C-term				False
+359	F	C-term				False
+360	S	C-term				False
+361	I	C-term				False
+362	S	C-term				False
+363	N	C-term				False
+364	R	C-term				False
+365	I	C-term				False
+366	T	C-term				False
+367	D	C-term				False
+368	L	C-term				False
+369	G	C-term				False
+370	L	C-term				False
+371	S	C-term				False
+372	P	C-term				False
+373	H	C-term				False
+374	L	C-term				False
+375	T	C-term				False
+376	A	C-term				False
+377	L	C-term				False
+378	M	C-term				False
+379	A	C-term				False
+380	G	C-term				False
+381	G	C-term				False
+382	Q	C-term				False
+383	P	C-term				False
+384	L	C-term				False
+385	G	C-term				False
+386	H	C-term				False
+387	S	C-term				False
+388	S	C-term				False
+389	S	C-term				False
+390	T	C-term				False
+391	G	C-term				False
+392	D	C-term				False
+393	T	C-term				False
+394	G	C-term				False
+395	F	C-term				False
+396	S	C-term				False
+397	C	C-term				False
+398	S	C-term				False
+399	Q	C-term				False
+400	D	C-term				False
+401	S	C-term				False
+402	G	C-term				False
+403	T	C-term				False
+404	D	C-term				False
+405	M	C-term				False
+406	M	C-term				False
+407	L	C-term				False
+408	L	C-term				False
+409	E	C-term				False
+410	D	C-term				False
+411	Y	C-term				False
+412	T	C-term				False
+413	S	C-term				False
+414	D	C-term				False
+415	D	C-term				False
+416	N	C-term				False
+417	P	C-term				False
+418	P	C-term				False
+419	S	C-term				False
+420	H	C-term				False
+421	C	C-term				False
+422	T	C-term				False
+423	C	C-term				False
+424	P	C-term				False
+425	P	C-term				False
+426	K	C-term				False
+427	R	C-term				False
+428	R	C-term				False
+429	S	C-term				False
+430	S	C-term				False
+431	V	C-term				False
+432	T	C-term				False
+433	F	C-term				False
+434	E	C-term				False
+435	D	C-term				False
+436	E	C-term				False
+437	V	C-term				False
+438	E	C-term				False
+439	Q	C-term				False
+440	I	C-term				False
+441	K	C-term				False
+442	E	C-term				False
+443	A	C-term				False
+444	A	C-term				False
+445	K	C-term				False
+446	N	C-term				False
+447	S	C-term				False
+448	I	C-term				False
+449	L	C-term				False
+450	H	C-term				False
+451	V	C-term				False
+452	K	C-term				False
+453	A	C-term				False
+454	E	C-term				False
+455	V	C-term				False
+456	H	C-term				False
+457	K	C-term				False
+458	S	C-term				False
+459	L	C-term				False
+460	D	C-term				False
+461	S	C-term				False
+462	Y	C-term				False
+463	A	C-term				False
+464	A	C-term				False
+465	S	C-term				False
+466	L	C-term				False
+467	A	C-term				False
+468	K	C-term				False
+469	A	C-term				False
+470	I	C-term				False
+471	E	C-term				False
+472	A	C-term				False
+473	E	C-term				False
+474	A	C-term				False
+475	K	C-term				False
+476	I	C-term				False
+477	N	C-term				False
+478	L	C-term				False
+479	F	C-term				False
+480	G	C-term				False
+481	E	C-term				False
+482	E	C-term				False
+483	A	C-term				False
+484	L	C-term				False
+485	P	C-term				False
+486	G	C-term				False
+487	V	C-term				False
+488	L	C-term				False
+489	V	C-term				False
+490	T	C-term				False
+491	A	C-term				False
+492	R	C-term				False
+493	T	C-term				False
+494	V	C-term				False
+495	P	C-term				False
+496	G	C-term				False
+497	G	C-term				False
+498	G	C-term				False
+499	F	C-term				False
+500	G	C-term				False
+501	G	C-term				False
+502	R	C-term				False
+503	R	C-term				False
+504	G	C-term				False
+505	S	C-term				False
+506	R	C-term				False
+507	T	C-term				False
+508	L	C-term				False
+509	V	C-term				False
+510	S	C-term				False
+511	Q	C-term				False
+512	R	C-term				False
+513	L	C-term				False
+514	Q	C-term				False
+515	L	C-term				False
+516	Q	C-term				False
+517	S	C-term				False
+518	I	C-term				False
+519	E	C-term				False
+520	E	C-term				False
+521	G	C-term				False
+522	D	C-term				False
+523	V	C-term				False
+524	L	C-term				False
+525	A	C-term				False
+526	A	C-term				False
+527	E	C-term				False
+528	Q	C-term				False
+529	R	C-term				False

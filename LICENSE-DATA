@@ -1,0 +1,24 @@
+All content in this repository that is not source code — the data files under
+data/, the figures under figures/, the tables under tables/, the documentation
+under docs/, and the top-level README and metadata files — is released under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+    Copyright (c) 2026 Matthew K. Howard
+    https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt these files for any purpose, including
+commercially, provided you give appropriate credit, link to the licence, and
+indicate if changes were made. Please cite the accompanying paper.
+
+Source code in pipeline/ and scripts/ is published by the same copyright holder
+under the MIT licence instead — see LICENSE.
+
+Third-party content, which this copyright does NOT cover:
+
+  * data/annotation/ is redistributed from GPCRdb under CC BY 4.0 and must be
+    attributed to GPCRdb. See data/annotation/SOURCE.md.
+  * Two files carry GPCRdb-derived content onward, under the same terms: the
+    `bw` column of data/processed/position_summary.tsv is GPCRdb's generic
+    numbering, and the snake-plot panel of figures/phenotype_classes.pdf/.png
+    is drawn on GPCRdb's published residue layout. The values plotted on that
+    layout, and every other column and panel in those files, are this study's.
