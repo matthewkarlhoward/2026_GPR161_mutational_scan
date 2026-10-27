@@ -1,5 +1,7 @@
 # GPR161 deep mutational scan
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23682577.svg)](https://doi.org/10.5281/zenodo.23682577)
+
 Code and data for the GPR161 saturation mutagenesis study. A library built for this work
 with the DIMPLE method carries **11,043 designed variants** across **528 positions**
 (missense, synonymous and single-residue deletions), read out in **three parallel FACS
@@ -161,10 +163,16 @@ mutants this scan is benchmarked against
 
 ## Citing this repository
 
-Citation metadata is in [`CITATION.cff`](CITATION.cff), which GitHub renders as **Cite
-this repository**, and in [`.zenodo.json`](.zenodo.json). Releases are set up to be
-archived on Zenodo, where each one gets its own DOI under a concept DOI that always
-resolves to the latest version — **not yet deposited**; the procedure is in
+Releases are archived on Zenodo. Cite the **concept DOI**, which always resolves to the
+latest version:
+
+> Howard, M. K. GPR161 deep mutational scan. Zenodo.
+> doi:[10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577)
+
+Each release also gets its own version DOI (v0.1.0 is
+[10.5281/zenodo.23682578](https://doi.org/10.5281/zenodo.23682578)). Citation metadata is
+in [`CITATION.cff`](CITATION.cff), which GitHub renders as **Cite this repository**, and
+in [`.zenodo.json`](.zenodo.json); the release procedure is in
 [`docs/RELEASING.md`](docs/RELEASING.md).
 
 ## Correspondence

@@ -1,6 +1,14 @@
 # Releasing and archiving on Zenodo
 
-Nothing has been deposited yet. This is the procedure for when it is.
+The repository is connected to Zenodo and **v0.1.0 is deposited**:
+
+| | |
+|---|---|
+| concept DOI (cite this) | [10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577) |
+| v0.1.0 | [10.5281/zenodo.23682578](https://doi.org/10.5281/zenodo.23682578) |
+
+The one-time setup below is done; keep it for the record. Later releases need only the
+"Cutting a release" steps.
 
 ## One-time setup
 
@@ -11,9 +19,10 @@ Nothing has been deposited yet. This is the procedure for when it is.
    **on**. Zenodo adds a webhook; nothing is archived until a release is published
    *after* this point — earlier tags are not picked up retroactively, though Zenodo
    support can import a past release by hand if you ask.
-3. The ORCID is already in both files. If you want an institutional affiliation on the
-   record, add `"affiliation"` inside the `creators` entry of `.zenodo.json` (and
-   `affiliation:` under `authors` in `CITATION.cff`) — it is the one field still blank.
+3. The ORCID is in both files and came through on the record. If you want an
+   institutional affiliation shown, add `"affiliation"` inside the `creators` entry of
+   `.zenodo.json` (and `affiliation:` under `authors` in `CITATION.cff`) — it is the one
+   field still blank, and it will appear from the next release onwards.
 
 ## Cutting a release
 
