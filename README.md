@@ -1,4 +1,4 @@
-# GPR161 deep mutational scan — three phenotypes, one library
+# GPR161 deep mutational scan
 
 Code and data for the GPR161 saturation mutagenesis study. A library built for this work
 with the DIMPLE method carries **11,043 designed variants** across **528 positions**
@@ -9,12 +9,7 @@ HEK293T cells.
 Everything here rebuilds from the files in `data/`: the variant tables, the position
 table, the QC tables and every data panel of the figures.
 
-> **Scope.** This repository currently carries exactly what is needed to reproduce the
-> first two main figures and the library/sequencing QC supplement — the data, the
-> pipeline that turns scores into the analysis tables, and the panel code. The structural,
-> cross-receptor and human-variant analyses behind the later figures are not here yet and
-> will be added as the manuscript is finished. The pooled human GPCRome basal-cAMP survey
-> that accompanies this work has its own repository; this one is GPR161 only.
+> **Scope.** This repository currently carries what is needed to reproduce GPR161-related work. The pooled human GPCRome basal-cAMP survey that accompanies this work has its own repository: https://github.com/matthewkarlhoward/2026_GPCRome_basal_cAMP. 
 
 ---
 
@@ -79,20 +74,6 @@ unsorted library-input samples. Variant effects were estimated from the bin coun
 returns a posterior mean effect, its standard error, and a local false sign rate (lfsr)
 per variant.
 
-**Scores are centred on the synonymous mean of their own assay**, so `z = effect /
-SD(synonymous)` is the natural common unit. The three synonymous SDs are
-
-| assay | synonymous SD | z = -2 in effect units |
-|---|---|---|
-| cAMP | 0.185761 | -0.372 |
-| abundance | 0.169196 | -0.338 |
-| surface | 0.221162 | -0.442 |
-
-A cut at z < -2 carries a 4.6 % two-sided false-positive rate against the synonymous
-null. Both the variant-level and the position-level mechanism classes use that cut; the
-two rules are not identical and the difference is stated in
-[`docs/METHODS.md`](docs/METHODS.md).
-
 ## Numbering
 
 **All positions are UniProt [Q8N6U8](https://www.uniprot.org/uniprotkb/Q8N6U8) numbering**
@@ -106,24 +87,16 @@ and of chain R in PDB 8SMV. Positions 2-529 are assayed.
 
 ## References
 
-The software and reference resources used to produce and interpret this dataset. **The
-data itself — the library, the counts and the scores — was generated for the accompanying
-paper and is original to it.** The two method papers below are cited for the tools, not
-as the source of anything in `data/`. Every entry was checked against the publisher
-record (Crossref, UniProt, RCSB, GPCRdb) while the repository was assembled; retrieval
-dates, accessions and the resources used in analyses not yet deposited here are in
-[`docs/DATA_SOURCES.md`](docs/DATA_SOURCES.md).
-
-**Library design** — the method the variants in `data/library/` were designed and
-cloned with. The library itself was built for this study.
+**Library design** — DIMPLE, the method the variants in `data/library/` were designed and
+cloned with.
 
 > Macdonald, C. B., Nedrud, D., Grimes, P. R., Trinidad, D., Fraser, J. S. &
 > Coyote-Maestas, W. DIMPLE: deep insertion, deletion, and missense mutation libraries for
 > exploring protein variation in evolution, disease, and biology. *Genome Biology* **24**,
 > 36 (2023). doi:[10.1186/s13059-023-02880-6](https://doi.org/10.1186/s13059-023-02880-6)
 
-**Variant-effect scoring** — the model fitted to this study's bin counts to produce
-`data/scores/`. The scores are this study's measurements; Lilace is the estimator.
+**Variant-effect scoring** — Lilace, the model fitted to this study's bin counts to produce
+`data/scores/`.
 
 > Freudenberg, J., Rao, J., Howard, M. K., Macdonald, C., Greenwald, N. F.,
 > Coyote-Maestas, W. & Pimentel, H. Accurate variant effect estimation in FACS-based deep
@@ -171,7 +144,7 @@ mutants this scan is benchmarked against
 **Software** — `numpy`, `pandas`, `scipy`, `matplotlib`, `pillow`; versions pinned in
 [`requirements.txt`](requirements.txt).
 
-**Read processing** — the pipeline that turned this study's FASTQ into `data/counts/`.
+**Read processing** — Dumpling, the pipeline that turned this study's FASTQ into `data/counts/`.
 Its configuration and construct reference are committed at `pipeline/dumpling/`.
 
 > Rao, J., Xin, R., Macdonald, C., Howard, M. K., Estevam, G. O., Yee, S. W., Wang, M.,
