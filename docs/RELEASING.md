@@ -65,8 +65,8 @@ If you would rather the record itself read MIT, change that one field.
 
 ## Before the submission release, check
 
-- [ ] the raw FASTQ are deposited and the SRA accession is written into
-      `pipeline/README.md` §1
+- [x] the raw FASTQ are deposited and the SRA accession is written into
+      `pipeline/README.md` §1 — BioProject PRJNA1551518, processed 2026-10-27
 - [ ] the six `[CONFIRM]` items in `docs/METHODS.md` and `docs/DATA_SOURCES.md` §4 are
       resolved (Dumpling commit, Lilace version and call, and the reporter and
       construct citations)

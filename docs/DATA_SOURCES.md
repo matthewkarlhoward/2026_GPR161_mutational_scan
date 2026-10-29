@@ -49,6 +49,18 @@ are committed at `pipeline/dumpling/`. Cite Rosace for the pipeline:
 files. Dumpling is cited here for read processing only: the scores in `data/scores/` come
 from Lilace, not from the Enrich2 or Rosace scoring the pipeline can also run.
 
+### Structure rendering — UCSF ChimeraX ⚠️
+
+Manuscript Figure 4 panels a and c were rendered and labelled by hand in ChimeraX
+1.13.dev (daily build, 2026-08-11), from `data/structure/8smv.cif` coloured by the
+per-position values in `data/processed/position_summary.tsv`. That session is kept with
+the manuscript figures, not here, and the render images are not deposited. **Nothing in
+this repository needs ChimeraX** — everything `run_all.sh` builds, Figure 4 panel b
+included, is pure Python.
+
+> Meng, E. C. *et al.* UCSF ChimeraX: Tools for structure building and analysis.
+> *Protein Science* **32**, e4792 (2023). doi:10.1002/pro.4792
+
 ### Scientific Python stack ⚠️
 `numpy`, `pandas`, `scipy` and `matplotlib`, imported directly; `Pillow` is pinned
 because matplotlib writes PNGs through it.
@@ -94,10 +106,41 @@ include this alongside Ballesteros-Weinstein if the generic numbers appear in a 
 
 ---
 
+### `human_alleles.tsv` — gnomAD and ClinVar alleles observed in GPR161 ⚠️
+
+One row per distinct protein-level allele seen in human sequence data, used only by
+`scripts/fig4_human_variants.py` (manuscript Figure 5).
+
+| column | meaning |
+|---|---|
+| `protein_label` | the allele, `<wt><pos><mut>` or `<wt><pos>del`, 529-aa canonical numbering |
+| `source` | pipe-joined origins: `gnomAD_v4`, `ClinVar`, `literature_PMID…` |
+| `consequence_class` | `missense`, `synonymous`, `inframe_indel` |
+| `gnomad_pass_any` | the allele passes gnomAD's own quality filter in at least one record |
+| `clinvar_classification` | ClinVar's germline call, blank where there is none |
+
+948 alleles: 654 missense, 284 synonymous, 10 in-frame single-residue deletions.
+Applying the figure's filters gives 593 gnomAD-PASS missense and 112 ClinVar missense,
+of which 587 and 111 have DMS scores — the n the figure reports.
+
+**Provenance.** Extracted from a larger clinical-variant crosswalk held in the analysis
+workspace, which joins gnomAD v4 and ClinVar records to the scan. That crosswalk is
+deliberately **not** redistributed here: it carries case-level clinical fields
+(case identifiers, disease category, zygosity, ClinGen points) that are not needed to
+redraw the figure. Only the five columns above were carried over. Where one allele
+appeared under several records, the sources are unioned, `gnomad_pass_any` is the OR,
+and the first non-null ClinVar classification is kept — a plain de-duplication would
+drop the ClinVar source for the ten alleles that appear twice.
+
+**Dates.** gnomAD v4 and the ClinVar snapshot used for the crosswalk; see the manuscript
+methods for the access dates. ❓ Confirm both before release.
+
 ## 3. Reference sequences and structures used for numbering
 
-Not committed here as files, but every position in this repository is defined against
-them.
+Every position in this repository is defined against these. The sequences are not
+committed as files; the structure is — `pipeline/03_structure_annotation.py` downloads
+8SMV from RCSB into `data/structure/8smv.cif` on its first run, and ChimeraX reads the
+same file.
 
 | resource | accession | used for | cite |
 |---|---|---|---|
@@ -109,6 +152,20 @@ them.
 > ciliary cAMP signaling in the Hedgehog pathway. *Nature Structural & Molecular Biology*
 > **31**, 667-677 (2024). *(the source of 8SMV and of the published point mutants this
 > scan is benchmarked against)*
+
+### `structure_8smv.tsv` — the DMS joined to 8SMV ⚠️
+
+Built by `pipeline/03_structure_annotation.py`. Every column is computed here from the
+files above: `segment` and `generic` are copied from GPCRdb, `modeled` is whether chain
+R has coordinates for that residue, and `dist_gs` is the minimum heavy-atom distance to
+the G protein heterotrimer. 18 positions come within 4.5 A.
+
+**Removed 2026-10-28.** This table used to carry `dsasa_gs` (surface area buried on Gs
+binding, from a [topos](https://github.com/Wankowicz-Lab/topos) run on 8SMV) and the
+22-position `gs_footprint` derived from it. The manuscript does not use either, and the
+column was the only thing in this repository read from an absolute path outside it, so
+both were dropped. The structural statements in the paper rest on `dist_gs` and on the
+per-position effect sizes, not on buried area.
 
 ---
 

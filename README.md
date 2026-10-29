@@ -26,11 +26,13 @@ data/
   counts/       per-sample variant counts, 78 samples, gzipped CSV
   scores/       Lilace output, one table per assay (cre / surface / abundance)
   processed/    merged variant table + position table, built by pipeline/
-  annotation/   GPCRdb snake-plot layout and generic (Ballesteros-Weinstein) numbers
+  annotation/   GPCRdb snake-plot layout, generic numbers, and the 8SMV structural join
+  structure/    the 8SMV coordinates (fetched) and the ChimeraX attribute files
 pipeline/       counts -> scores -> analysis tables
   dumpling/     the read-processing run: Snakemake config and construct reference
 scripts/        figure and analysis code
   qc/           library and sequencing QC (the QC supplement)
+  structure/    the ChimeraX renders behind Figure 3
 figures/        figure panels written by the scripts (PDF + PNG)
 tables/         QC tables written by the scripts (CSV)
 docs/           METHODS.md, DATA_SOURCES.md, FIGURES.md, COLUMNS.md, RELEASING.md
@@ -38,23 +40,49 @@ docs/           METHODS.md, DATA_SOURCES.md, FIGURES.md, COLUMNS.md, RELEASING.m
 
 ## Rebuilding everything
 
+`bash run_all.sh` does all of this. Step by step, with manuscript figure numbers:
+
 ```bash
 pip install -r requirements.txt
 
-python3 pipeline/01_merge_scores.py        # data/processed/merged_variant_scores.tsv
-python3 pipeline/02_position_summary.py    # data/processed/position_summary.tsv
+python3 pipeline/01_merge_scores.py          # data/processed/merged_variant_scores.tsv
+python3 pipeline/02_position_summary.py      # data/processed/position_summary.tsv
+python3 pipeline/03_structure_annotation.py  # data/annotation/structure_8smv.tsv
 
-python3 scripts/fig1_landscape.py          # Fig 1b,c   density + substitution heatmaps
-python3 scripts/fig2_phenotype_classes.py  # Fig 2a-d   classes, snake plot, Sankey
-python3 scripts/qc/dms_qc_panel.py         # QC supplement, panels a-d in one row
+python3 scripts/fig1_landscape.py          # Fig 2b,c  density + substitution heatmaps
+python3 scripts/fig2_phenotype_classes.py  # Fig 3b-e  classes, snake plot, Sankey
+python3 scripts/fig3_structure.py          # Fig 4b    mean surface effect by segment
+python3 scripts/fig4_human_variants.py     # Fig 5a,b  gnomAD and ClinVar alleles
+python3 scripts/qc/dms_qc_panel.py         # Supp Fig 3, panels a-d in one row
 
 python3 scripts/qc/dms_qc_coverage.py      # write tables/qc_*.csv; add --figures
 python3 scripts/qc/dms_qc_scores.py        # for larger standalone QC panels
 ```
 
+Two scripts are deliberately **not** in that list, and not in `run_all.sh`:
+
+- `pipeline/04_human_alleles.py` rebuilds `data/annotation/human_alleles.tsv`, the input
+  to Figure 5. It needs a clinical-variant crosswalk that is not redistributed here (it
+  carries case-level clinical fields), so it cannot run from a fresh clone. The table it
+  produces is committed instead, and the script records the derivation.
+Manuscript Figure 4 panels a and c are ChimeraX renders made by hand; see below.
+
 Panel e of the QC supplement is the FACS gating, exported from the cytometry software,
 and panel a of Figure 1 is the assay schematic — neither is drawn by code. Everything
-else in the three figures comes from the three scripts above.
+else in the figures comes from the scripts above.
+
+### Figure 4 panels a and c
+
+Those two panels are ChimeraX renders made by hand. The structure is
+`data/structure/8smv.cif`, and the colouring is the per-position surface and cAMP values
+in `data/processed/position_summary.tsv` (`surf`, `cre`, `resid`), applied as residue
+attributes in a ChimeraX session kept with the manuscript figures rather than here.
+Neither that session nor the render images is deposited, so those two panels cannot be
+rebuilt from this repository — the structure file and the per-position table are what
+they were built from.
+
+Panel b (`figures/segment_effects.pdf`) is drawn by `scripts/fig3_structure.py` and
+needs no ChimeraX. Nothing in `run_all.sh` does.
 
 `pipeline/01` and `pipeline/02` regenerate the two tables in `data/processed/` byte for
 byte; they are committed so the figure scripts run without rerunning the pipeline.

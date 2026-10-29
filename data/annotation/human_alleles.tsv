@@ -1,0 +1,949 @@
+protein_label	source	consequence_class	gnomad_pass_any	clinvar_classification
+A104V	gnomAD_v4	missense	True	
+A113V	gnomAD_v4	missense	True	
+A128=	ClinVar|gnomAD_v4	synonymous	True	Benign
+A144=	gnomAD_v4	synonymous	True	
+A144T	gnomAD_v4	missense	True	
+A147T	gnomAD_v4	missense	True	
+A147V	gnomAD_v4	missense	True	
+A180G	gnomAD_v4	missense	True	
+A180V	gnomAD_v4	missense	True	
+A181=	gnomAD_v4	synonymous	True	
+A181S	gnomAD_v4	missense	True	
+A181V	gnomAD_v4	missense	True	
+A190V	gnomAD_v4	missense	True	
+A197=	gnomAD_v4	synonymous	True	
+A219T	gnomAD_v4	missense	True	
+A219V	gnomAD_v4	missense	True	
+A255=	gnomAD_v4	synonymous	True	
+A255D	gnomAD_v4	missense	True	
+A255V	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+A263=	gnomAD_v4	synonymous	True	
+A263V	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+A268=	gnomAD_v4	synonymous	True	
+A268G	gnomAD_v4	missense	True	
+A268T	gnomAD_v4	missense	True	
+A278=	gnomAD_v4	synonymous	True	
+A278D	gnomAD_v4	missense	True	
+A291=	gnomAD_v4	synonymous	True	
+A291S	gnomAD_v4	missense	True	
+A291T	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+A294D	gnomAD_v4	missense	True	
+A294S	gnomAD_v4	missense	True	
+A294V	gnomAD_v4	missense	True	
+A309T	gnomAD_v4	missense	True	
+A309V	literature_PMID30256984	missense	False	
+A315V	gnomAD_v4	missense	True	
+A317S	gnomAD_v4	missense	True	
+A317T	gnomAD_v4	missense	True	
+A33=	gnomAD_v4	synonymous	True	
+A33T	gnomAD_v4	missense	True	
+A376=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+A376E	gnomAD_v4	missense	False	
+A376V	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+A379=	gnomAD_v4	synonymous	True	
+A379E	gnomAD_v4	missense	False	
+A379S	gnomAD_v4	missense	False	
+A379T	gnomAD_v4	missense	False	
+A443S	gnomAD_v4	missense	False	
+A444S	gnomAD_v4	missense	True	
+A453=	gnomAD_v4	synonymous	True	
+A453D	gnomAD_v4	missense	True	
+A453T	gnomAD_v4	missense	True	
+A463=	gnomAD_v4	synonymous	True	
+A463G	gnomAD_v4	missense	True	
+A463T	gnomAD_v4	missense	True	
+A464=	gnomAD_v4	synonymous	True	
+A467G	gnomAD_v4	missense	True	
+A469=	gnomAD_v4	synonymous	True	
+A469V	gnomAD_v4	missense	True	
+A472=	gnomAD_v4	synonymous	True	
+A472D	gnomAD_v4	missense	True	
+A472P	gnomAD_v4	missense	False	
+A472T	gnomAD_v4	missense	True	
+A472V	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+A474=	gnomAD_v4	synonymous	True	
+A474D	gnomAD_v4	missense	True	
+A474G	gnomAD_v4	missense	True	
+A474T	ClinVar	missense	False	Uncertain significance
+A483=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+A483G	gnomAD_v4	missense	True	
+A491=	gnomAD_v4	synonymous	True	
+A491E	gnomAD_v4	missense	True	
+A526=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+A526T	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+C100=	gnomAD_v4	synonymous	True	
+C159=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+C159W	gnomAD_v4	missense	False	
+C178Y	gnomAD_v4	missense	True	
+C196Y	gnomAD_v4	missense	True	
+C207G	gnomAD_v4	missense	True	
+C207Y	gnomAD_v4	missense	True	
+C224=	gnomAD_v4	synonymous	True	
+C224F	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+C224Y	gnomAD_v4	missense	True	
+C266=	gnomAD_v4	synonymous	True	
+C266Y	gnomAD_v4	missense	True	
+C339=	gnomAD_v4	synonymous	True	
+C397=	gnomAD_v4	synonymous	True	
+C397Y	gnomAD_v4	missense	False	
+C421=	gnomAD_v4	synonymous	True	
+C423=	gnomAD_v4	synonymous	True	
+C423W	gnomAD_v4	missense	True	
+C42=	gnomAD_v4	synonymous	True	
+C9F	gnomAD_v4	missense	True	
+D124E	gnomAD_v4	missense	False	
+D124H	gnomAD_v4	missense	True	
+D124N	gnomAD_v4	missense	True	
+D124Y	gnomAD_v4	missense	True	
+D172=	gnomAD_v4	synonymous	True	
+D172G	gnomAD_v4	missense	True	
+D233N	gnomAD_v4	missense	True	
+D342N	gnomAD_v4	missense	True	
+D367E	gnomAD_v4	missense	True	
+D392E	gnomAD_v4	missense	False	
+D392G	gnomAD_v4	missense	False	
+D392H	gnomAD_v4	missense	True	
+D392N	gnomAD_v4	missense	True	
+D400E	gnomAD_v4	missense	False	
+D400N	gnomAD_v4	missense	True	
+D400Y	gnomAD_v4	missense	False	
+D404E	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+D404G	gnomAD_v4	missense	True	
+D410=	gnomAD_v4	synonymous	True	
+D410N	gnomAD_v4	missense	True	
+D410V	gnomAD_v4	missense	True	
+D414=	ClinVar|gnomAD_v4	synonymous	True	Benign
+D414N	gnomAD_v4	missense	True	
+D415=	ClinVar	synonymous	False	Likely benign
+D415G	gnomAD_v4	missense	True	
+D460=	gnomAD_v4	synonymous	True	
+D460N	gnomAD_v4	missense	True	
+D522G	gnomAD_v4	missense	True	
+E12G	gnomAD_v4	missense	True	
+E12K	gnomAD_v4	missense	True	
+E170=	gnomAD_v4	synonymous	True	
+E173=	gnomAD_v4	synonymous	True	
+E173K	gnomAD_v4	missense	True	
+E185K	gnomAD_v4	missense	True	
+E185Q	gnomAD_v4	missense	True	
+E19D	gnomAD_v4	missense	True	
+E20D	gnomAD_v4	missense	True	
+E20K	gnomAD_v4	missense	True	
+E20del	gnomAD_v4	inframe_indel	True	
+E231K	gnomAD_v4	missense	True	
+E232G	ClinVar	missense	False	Uncertain significance
+E23K	gnomAD_v4	missense	True	
+E293=	gnomAD_v4	synonymous	True	
+E293K	gnomAD_v4	missense	True	
+E306D	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E306K	gnomAD_v4	missense	True	
+E306Q	gnomAD_v4	missense	True	
+E306V	gnomAD_v4	missense	True	
+E334G	gnomAD_v4	missense	True	
+E347=	gnomAD_v4	synonymous	True	
+E347K	gnomAD_v4	missense	True	
+E434A	gnomAD_v4	missense	True	
+E434D	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E436D	gnomAD_v4	missense	True	
+E436K	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E438G	gnomAD_v4	missense	True	
+E438K	gnomAD_v4	missense	True	
+E442A	gnomAD_v4	missense	True	
+E454=	gnomAD_v4	synonymous	True	
+E471=	ClinVar|gnomAD_v4|literature_PMID30256984	synonymous	True	Benign
+E471D	gnomAD_v4	missense	True	
+E473=	gnomAD_v4	synonymous	True	
+E473G	gnomAD_v4	missense	True	
+E473K	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E482A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E482D	gnomAD_v4	missense	True	
+E482K	gnomAD_v4	missense	True	
+E482del	gnomAD_v4	inframe_indel	True	
+E519K	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E520G	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E520del	gnomAD_v4	inframe_indel	True	
+E527=	gnomAD_v4	synonymous	True	
+E527K	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+E92=	gnomAD_v4	synonymous	True	
+F102L	gnomAD_v4	missense	True	
+F164=	gnomAD_v4	synonymous	True	
+F164C	gnomAD_v4	missense	True	
+F171=	gnomAD_v4	synonymous	True	
+F171S	gnomAD_v4	missense	True	
+F199L	gnomAD_v4	missense	False	
+F201=	gnomAD_v4	synonymous	True	
+F212L	gnomAD_v4	missense	True	
+F279S	gnomAD_v4	missense	True	
+F279V	ClinVar	missense	False	Uncertain significance
+F340L	gnomAD_v4	missense	True	
+F340S	gnomAD_v4	missense	True	
+F349S	gnomAD_v4	missense	True	
+F359=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+F395=	gnomAD_v4	synonymous	True	
+F395L	gnomAD_v4	missense	False	
+F395V	gnomAD_v4	missense	True	
+F40I	gnomAD_v4	missense	True	
+F40V	gnomAD_v4	missense	True	
+F433C	gnomAD_v4	missense	True	
+F433I	gnomAD_v4	missense	True	
+F433L	gnomAD_v4	missense	True	
+F433S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+F479I	gnomAD_v4	missense	True	
+F479L	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+F479S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+F479V	gnomAD_v4	missense	True	
+F499=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+F499L	gnomAD_v4	missense	True	
+F65=	gnomAD_v4	synonymous	True	
+F65L	gnomAD_v4	missense	True	
+F65V	gnomAD_v4	missense	True	
+F67=	gnomAD_v4	synonymous	True	
+F67L	gnomAD_v4	missense	True	
+F74I	gnomAD_v4	missense	True	
+F74L	gnomAD_v4	missense	True	
+F83=	gnomAD_v4	synonymous	True	
+F95=	gnomAD_v4	synonymous	True	
+F95S	gnomAD_v4	missense	True	
+G119=	gnomAD_v4	synonymous	True	
+G119R	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G119W	gnomAD_v4	missense	True	
+G158=	gnomAD_v4	synonymous	True	
+G158S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G165=	gnomAD_v4	synonymous	True	
+G165D	gnomAD_v4	missense	True	
+G165R	gnomAD_v4	missense	True	
+G165V	gnomAD_v4	missense	True	
+G187D	gnomAD_v4	missense	True	
+G187S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G209=	gnomAD_v4	synonymous	True	
+G209A	gnomAD_v4	missense	True	
+G209S	gnomAD_v4	missense	True	
+G209V	gnomAD_v4	missense	True	
+G21D	gnomAD_v4	missense	True	
+G21S	gnomAD_v4	missense	True	
+G22=	ClinVar|gnomAD_v4|literature_PMID30256984	synonymous	True	Benign
+G238=	gnomAD_v4	synonymous	True	
+G238A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G238R	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G24R	gnomAD_v4	missense	True	
+G250=	gnomAD_v4	synonymous	True	
+G258D	gnomAD_v4	missense	True	
+G258S	gnomAD_v4	missense	True	
+G25=	ClinVar|gnomAD_v4	synonymous	True	Benign
+G25C	gnomAD_v4	missense	True	
+G25D	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G25R	gnomAD_v4	missense	True	
+G25V	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G277=	gnomAD_v4	synonymous	True	
+G277S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G284=	gnomAD_v4	synonymous	True	
+G284V	gnomAD_v4	missense	True	
+G297=	gnomAD_v4	synonymous	True	
+G337=	gnomAD_v4	synonymous	True	
+G337V	gnomAD_v4	missense	True	
+G341E	gnomAD_v4	missense	True	
+G369=	gnomAD_v4	synonymous	False	
+G369C	gnomAD_v4	missense	True	
+G369D	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G369V	gnomAD_v4	missense	True	
+G380=	ClinVar|gnomAD_v4	synonymous	True	Benign
+G380S	gnomAD_v4	missense	True	
+G381=	ClinVar|gnomAD_v4	synonymous	False	no classification provided (evidence_only)
+G381R	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G385=	gnomAD_v4	synonymous	True	
+G385R	gnomAD_v4	missense	True	
+G391=	gnomAD_v4	synonymous	True	
+G391A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G391R	gnomAD_v4	missense	True	
+G394=	gnomAD_v4	synonymous	True	
+G394S	gnomAD_v4	missense	True	
+G44R	gnomAD_v4	missense	True	
+G480=	gnomAD_v4	synonymous	True	
+G486=	gnomAD_v4	synonymous	True	
+G486R	gnomAD_v4	missense	True	
+G496=	gnomAD_v4	synonymous	True	
+G496W	gnomAD_v4	missense	True	
+G497=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+G497D	ClinVar|gnomAD_v4	missense	True	Likely benign
+G497S	gnomAD_v4	missense	True	
+G498=	gnomAD_v4	synonymous	True	
+G498A	gnomAD_v4	missense	True	
+G498S	gnomAD_v4	missense	True	
+G500A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+G500R	gnomAD_v4	missense	True	
+G501=	gnomAD_v4	synonymous	True	
+G501S	ClinVar	missense	False	Uncertain significance
+G504=	gnomAD_v4	synonymous	True	
+G504C	gnomAD_v4	missense	True	
+G504D	gnomAD_v4	missense	True	
+G504S	gnomAD_v4	missense	True	
+G521del	gnomAD_v4	inframe_indel	True	
+G96=	gnomAD_v4	synonymous	True	
+G96D	gnomAD_v4	missense	True	
+H154=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+H223=	gnomAD_v4	synonymous	True	
+H320=	gnomAD_v4	synonymous	True	
+H373=	gnomAD_v4	synonymous	True	
+H373N	gnomAD_v4	missense	False	
+H373Q	gnomAD_v4	missense	False	
+H373R	gnomAD_v4	missense	True	
+H373Y	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+H386=	gnomAD_v4	synonymous	True	
+H420=	gnomAD_v4	synonymous	True	
+H420P	gnomAD_v4	missense	False	
+H450=	gnomAD_v4	synonymous	True	
+H450P	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+H450Q	gnomAD_v4	missense	True	
+H456Q	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+H456R	gnomAD_v4	missense	True	
+H456Y	gnomAD_v4	missense	True	
+I110=	gnomAD_v4	synonymous	True	
+I110F	gnomAD_v4	missense	True	
+I110M	gnomAD_v4	missense	True	
+I121=	gnomAD_v4	synonymous	True	
+I123=	gnomAD_v4	synonymous	True	
+I123M	gnomAD_v4	missense	True	
+I139=	gnomAD_v4	synonymous	True	
+I139V	gnomAD_v4	missense	True	
+I151V	gnomAD_v4	missense	True	
+I157=	ClinVar|gnomAD_v4	synonymous	True	Benign
+I157V	gnomAD_v4	missense	True	
+I194S	gnomAD_v4	missense	True	
+I211=	gnomAD_v4	synonymous	True	
+I211N	gnomAD_v4	missense	True	
+I229=	gnomAD_v4	synonymous	True	
+I270V	gnomAD_v4	missense	True	
+I27F	gnomAD_v4	missense	True	
+I27N	gnomAD_v4	missense	True	
+I27V	gnomAD_v4	missense	True	
+I28del	gnomAD_v4	inframe_indel	True	
+I290=	gnomAD_v4	synonymous	True	
+I290V	gnomAD_v4	missense	True	
+I323M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+I32=	gnomAD_v4	synonymous	True	
+I32L	gnomAD_v4	missense	True	
+I32V	gnomAD_v4	missense	True	
+I34M	gnomAD_v4	missense	True	
+I34V	gnomAD_v4	missense	True	
+I35V	gnomAD_v4	missense	True	
+I361=	gnomAD_v4	synonymous	True	
+I361V	gnomAD_v4	missense	True	
+I365F	gnomAD_v4	missense	True	
+I37=	gnomAD_v4	synonymous	True	
+I39=	gnomAD_v4	synonymous	True	
+I39V	gnomAD_v4	missense	True	
+I440=	gnomAD_v4	synonymous	False	
+I448=	gnomAD_v4	synonymous	True	
+I448V	gnomAD_v4	missense	True	
+I470=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+I470T	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+I476V	gnomAD_v4	missense	True	
+I48=	gnomAD_v4	synonymous	True	
+I48V	ClinVar	missense	False	Uncertain significance
+I518=	gnomAD_v4	synonymous	True	
+I518M	gnomAD_v4	missense	True	
+I518V	gnomAD_v4	missense	True	
+I89F	gnomAD_v4	missense	True	
+K138E	gnomAD_v4	missense	True	
+K175=	gnomAD_v4	synonymous	True	
+K221=	gnomAD_v4	synonymous	True	
+K221R	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+K240R	gnomAD_v4	missense	True	
+K298=	gnomAD_v4	synonymous	True	
+K329=	gnomAD_v4	synonymous	True	
+K329M	gnomAD_v4	missense	True	
+K426T	gnomAD_v4	missense	False	
+K441E	gnomAD_v4	missense	True	
+K441N	gnomAD_v4	missense	True	
+K441T	gnomAD_v4	missense	True	
+K452=	gnomAD_v4	synonymous	True	
+K452R	gnomAD_v4	missense	True	
+K457=	gnomAD_v4	synonymous	True	
+K457E	gnomAD_v4	missense	True	
+K468=	gnomAD_v4	synonymous	True	
+K468E	gnomAD_v4	missense	True	
+K54E	gnomAD_v4	missense	True	
+K54N	gnomAD_v4	missense	True	
+K54R	gnomAD_v4	missense	True	
+K55N	gnomAD_v4	missense	True	
+L105=	gnomAD_v4	synonymous	True	
+L105F	gnomAD_v4	missense	True	
+L106=	gnomAD_v4	synonymous	True	
+L106F	gnomAD_v4	missense	True	
+L106del	gnomAD_v4	inframe_indel	True	
+L109=	gnomAD_v4	synonymous	True	
+L118=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+L118V	gnomAD_v4	missense	True	
+L130=	gnomAD_v4	synonymous	True	
+L13=	gnomAD_v4	synonymous	True	
+L13M	gnomAD_v4	missense	True	
+L148=	gnomAD_v4	synonymous	True	
+L148F	gnomAD_v4	missense	True	
+L153=	gnomAD_v4	synonymous	True	
+L156=	gnomAD_v4	synonymous	True	
+L156P	gnomAD_v4	missense	True	
+L160=	gnomAD_v4	synonymous	True	
+L163=	gnomAD_v4	synonymous	True	
+L163Q	gnomAD_v4	missense	True	
+L163V	gnomAD_v4	missense	True	
+L16I	gnomAD_v4	missense	True	
+L198=	ClinVar|gnomAD_v4	synonymous	True	Benign
+L202=	gnomAD_v4	synonymous	True	
+L202V	gnomAD_v4	missense	True	
+L205=	gnomAD_v4	synonymous	True	
+L205Q	gnomAD_v4	missense	True	
+L205R	gnomAD_v4	missense	True	
+L269=	gnomAD_v4	synonymous	True	
+L269F	gnomAD_v4	missense	True	
+L273=	gnomAD_v4	synonymous	True	
+L276=	ClinVar|gnomAD_v4	synonymous	True	Benign
+L276F	gnomAD_v4	missense	True	
+L276V	gnomAD_v4	missense	True	
+L295=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+L295F	gnomAD_v4	missense	True	
+L305R	gnomAD_v4	missense	True	
+L312P	gnomAD_v4	missense	True	
+L322V	gnomAD_v4	missense	True	
+L326=	gnomAD_v4	synonymous	True	
+L326P	gnomAD_v4	missense	True	
+L326R	gnomAD_v4	missense	True	
+L326V	gnomAD_v4	missense	True	
+L336=	gnomAD_v4	synonymous	True	
+L336V	gnomAD_v4	missense	True	
+L358=	gnomAD_v4	synonymous	True	
+L368M	gnomAD_v4	missense	False	
+L368P	gnomAD_v4	missense	False	
+L368R	gnomAD_v4	missense	False	
+L368V	gnomAD_v4	missense	True	
+L370=	gnomAD_v4	synonymous	True	
+L370M	gnomAD_v4	missense	False	
+L370P	gnomAD_v4	missense	False	
+L374=	gnomAD_v4	synonymous	False	
+L374I	gnomAD_v4	missense	True	
+L374R	gnomAD_v4	missense	True	
+L377=	gnomAD_v4	synonymous	False	
+L377I	gnomAD_v4	missense	False	
+L377R	gnomAD_v4	missense	True	
+L384=	gnomAD_v4	synonymous	True	
+L384P	gnomAD_v4	missense	True	
+L3=	gnomAD_v4	synonymous	True	
+L407M	gnomAD_v4	missense	True	
+L407Q	gnomAD_v4	missense	True	
+L408P	gnomAD_v4	missense	True	
+L43=	gnomAD_v4	synonymous	True	
+L459=	gnomAD_v4	synonymous	True	
+L459M	gnomAD_v4	missense	True	
+L466=	ClinVar|gnomAD_v4	synonymous	True	Benign
+L466F	gnomAD_v4	missense	True	
+L46=	gnomAD_v4	synonymous	True	
+L46V	gnomAD_v4	missense	True	
+L484=	gnomAD_v4	synonymous	True	
+L488=	gnomAD_v4	synonymous	True	
+L488F	ClinVar	missense	False	Uncertain significance
+L488S	gnomAD_v4	missense	True	
+L488V	gnomAD_v4	missense	True	
+L508=	gnomAD_v4	synonymous	True	
+L508F	gnomAD_v4	missense	True	
+L508H	gnomAD_v4	missense	True	
+L508P	gnomAD_v4	missense	True	
+L515=	gnomAD_v4	synonymous	True	
+L524=	gnomAD_v4	synonymous	True	
+L524I	gnomAD_v4	missense	True	
+L52F	gnomAD_v4	missense	True	
+L58=	gnomAD_v4	synonymous	True	
+L59F	gnomAD_v4	missense	True	
+L59P	gnomAD_v4	missense	True	
+L61F	gnomAD_v4	missense	True	
+L69=	gnomAD_v4	synonymous	True	
+L71=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+L71V	gnomAD_v4	missense	True	
+L75=	gnomAD_v4	synonymous	True	
+L76=	gnomAD_v4	synonymous	True	
+L79F	gnomAD_v4	missense	True	
+L7=	gnomAD_v4	synonymous	True	
+L7F	gnomAD_v4	missense	True	
+L81=	ClinVar|gnomAD_v4	synonymous	True	Benign
+M115L	gnomAD_v4	missense	True	
+M115V	gnomAD_v4	missense	True	
+M133T	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+M133V	gnomAD_v4	missense	True	
+M137K	gnomAD_v4	missense	True	
+M137L	gnomAD_v4	missense	True	
+M137V	gnomAD_v4	missense	True	
+M146K	gnomAD_v4	missense	True	
+M177I	gnomAD_v4	missense	True	
+M204I	gnomAD_v4	missense	True	
+M280I	gnomAD_v4	missense	True	
+M280L	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+M280T	gnomAD_v4	missense	True	
+M280V	gnomAD_v4	missense	True	
+M287I	gnomAD_v4	missense	True	
+M287V	gnomAD_v4	missense	True	
+M338I	gnomAD_v4	missense	True	
+M338T	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+M338V	gnomAD_v4	missense	True	
+M378I	gnomAD_v4	missense	True	
+M378L	gnomAD_v4	missense	True	
+M378T	gnomAD_v4	missense	True	
+M405V	gnomAD_v4	missense	True	
+M406I	gnomAD_v4	missense	True	
+M406L	gnomAD_v4	missense	True	
+M406V	gnomAD_v4	missense	True	
+N101K	gnomAD_v4	missense	True	
+N101S	gnomAD_v4	missense	True	
+N101T	gnomAD_v4	missense	True	
+N142=	gnomAD_v4	synonymous	True	
+N142S	gnomAD_v4	missense	True	
+N15K	gnomAD_v4	missense	True	
+N15S	gnomAD_v4	missense	True	
+N241K	gnomAD_v4	missense	True	
+N241T	gnomAD_v4	missense	True	
+N254K	gnomAD_v4	missense	True	
+N254S	gnomAD_v4	missense	True	
+N264T	gnomAD_v4	missense	True	
+N328=	gnomAD_v4	synonymous	True	
+N328K	gnomAD_v4	missense	True	
+N363=	gnomAD_v4	synonymous	True	
+N363S	gnomAD_v4	missense	True	
+N416K	gnomAD_v4	missense	True	
+N416S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+N446=	gnomAD_v4	synonymous	True	
+N446K	gnomAD_v4	missense	True	
+N446S	gnomAD_v4	missense	True	
+N45=	gnomAD_v4	synonymous	True	
+N477K	gnomAD_v4	missense	True	
+N4=	gnomAD_v4	synonymous	True	
+N4S	gnomAD_v4	missense	True	
+N4T	gnomAD_v4	missense	True	
+N63K	gnomAD_v4	missense	True	
+N73=	gnomAD_v4	synonymous	True	
+P132=	gnomAD_v4	synonymous	True	
+P132A	gnomAD_v4	missense	True	
+P136L	gnomAD_v4	missense	True	
+P136S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+P161=	gnomAD_v4	synonymous	True	
+P161S	gnomAD_v4	missense	True	
+P162=	ClinVar|gnomAD_v4	synonymous	True	Benign
+P162S	gnomAD_v4	missense	True	
+P285=	gnomAD_v4	synonymous	True	
+P285S	gnomAD_v4	missense	True	
+P303=	gnomAD_v4	synonymous	True	
+P303L	gnomAD_v4	missense	True	
+P303S	gnomAD_v4	missense	True	
+P321=	gnomAD_v4	synonymous	True	
+P321H	gnomAD_v4	missense	True	
+P321S	gnomAD_v4	missense	True	
+P321T	gnomAD_v4	missense	True	
+P348=	gnomAD_v4	synonymous	True	
+P348Q	gnomAD_v4	missense	True	
+P372=	gnomAD_v4	synonymous	True	
+P372A	gnomAD_v4	missense	True	
+P372L	gnomAD_v4	missense	False	
+P372Q	gnomAD_v4	missense	False	
+P383=	gnomAD_v4	synonymous	True	
+P383H	gnomAD_v4	missense	True	
+P383S	gnomAD_v4	missense	True	
+P383T	gnomAD_v4	missense	False	
+P417=	gnomAD_v4	synonymous	True	
+P417A	gnomAD_v4	missense	True	
+P417L	gnomAD_v4	missense	True	
+P418=	gnomAD_v4	synonymous	True	
+P418S	gnomAD_v4	missense	True	
+P424=	gnomAD_v4	synonymous	True	
+P424A	gnomAD_v4	missense	True	
+P424L	gnomAD_v4	missense	True	
+P424S	gnomAD_v4	missense	True	
+P425=	gnomAD_v4	synonymous	True	
+P425H	gnomAD_v4	missense	True	
+P425S	ClinVar	missense	False	Uncertain significance
+P485=	gnomAD_v4	synonymous	True	
+P485S	gnomAD_v4	missense	True	
+P495=	gnomAD_v4	synonymous	True	
+P495A	gnomAD_v4	missense	True	
+P495L	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+P495S	gnomAD_v4	missense	True	
+Q193=	gnomAD_v4	synonymous	True	
+Q193E	gnomAD_v4	missense	True	
+Q193H	gnomAD_v4	missense	True	
+Q235K	gnomAD_v4	missense	False	
+Q235R	gnomAD_v4	missense	True	
+Q265=	gnomAD_v4	synonymous	True	
+Q265H	gnomAD_v4	missense	True	
+Q382E	ClinVar	missense	False	Uncertain significance
+Q382K	gnomAD_v4	missense	True	
+Q382R	gnomAD_v4	missense	True	
+Q399=	gnomAD_v4	synonymous	True	
+Q399K	gnomAD_v4	missense	False	
+Q399R	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+Q439R	gnomAD_v4	missense	True	
+Q514H	gnomAD_v4	missense	True	
+Q514R	gnomAD_v4	missense	True	
+Q516H	gnomAD_v4	missense	True	
+Q516P	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+Q528L	gnomAD_v4	missense	True	
+R10=	gnomAD_v4	synonymous	True	
+R125C	gnomAD_v4	missense	True	
+R125H	gnomAD_v4	missense	True	
+R125L	ClinVar	missense	False	no classification provided (evidence_only)
+R143=	gnomAD_v4	synonymous	True	
+R143Q	gnomAD_v4	missense	True	
+R143W	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R184=	gnomAD_v4	synonymous	True	
+R184Q	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R184W	gnomAD_v4	missense	True	
+R213=	gnomAD_v4	synonymous	True	
+R213C	gnomAD_v4	missense	True	
+R213H	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R213L	gnomAD_v4	missense	True	
+R216G	gnomAD_v4	missense	True	
+R216S	gnomAD_v4	missense	True	
+R220=	ClinVar|gnomAD_v4|literature_PMID30256984	synonymous	True	Likely benign
+R220C	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R220H	gnomAD_v4	missense	True	
+R220L	gnomAD_v4	missense	True	
+R236W	gnomAD_v4	missense	True	
+R239=	gnomAD_v4	synonymous	True	
+R239K	gnomAD_v4	missense	True	
+R252=	gnomAD_v4	synonymous	True	
+R252G	gnomAD_v4	missense	True	
+R252W	gnomAD_v4	missense	True	
+R253=	gnomAD_v4	synonymous	True	
+R253K	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R253S	gnomAD_v4	missense	True	
+R332=	gnomAD_v4	synonymous	True	
+R332C	gnomAD_v4	missense	True	
+R332G	gnomAD_v4	missense	True	
+R332H	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R332S	gnomAD_v4	missense	True	
+R343=	gnomAD_v4	synonymous	True	
+R343G	gnomAD_v4	missense	True	
+R343L	gnomAD_v4	missense	True	
+R343P	gnomAD_v4	missense	True	
+R343Q	gnomAD_v4	missense	True	
+R343W	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R346=	gnomAD_v4	synonymous	True	
+R346Q	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R346W	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R352=	gnomAD_v4	synonymous	True	
+R352Q	gnomAD_v4	missense	True	
+R354=	gnomAD_v4	synonymous	True	
+R364=	gnomAD_v4	synonymous	True	
+R364G	gnomAD_v4	missense	True	
+R364S	ClinVar	missense	False	no classification provided (evidence_only)
+R364T	gnomAD_v4	missense	True	
+R427=	gnomAD_v4	synonymous	True	
+R428=	gnomAD_v4	synonymous	True	
+R428K	gnomAD_v4	missense	True	
+R492G	gnomAD_v4	missense	True	
+R492Q	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R492W	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R502=	gnomAD_v4	synonymous	True	
+R502C	gnomAD_v4	missense	True	
+R502H	ClinVar|gnomAD_v4	missense	True	Likely benign
+R503=	gnomAD_v4	synonymous	True	
+R503Q	gnomAD_v4	missense	True	
+R506=	gnomAD_v4	synonymous	True	
+R506S	ClinVar	missense	False	Uncertain significance
+R512=	gnomAD_v4	synonymous	True	
+R512K	gnomAD_v4	missense	True	
+R529=	gnomAD_v4	synonymous	True	
+R529I	gnomAD_v4	missense	True	
+R90=	gnomAD_v4	synonymous	True	
+R90C	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+R90G	gnomAD_v4	missense	True	
+R90H	gnomAD_v4	missense	True	
+R90L	gnomAD_v4	missense	True	
+R91=	gnomAD_v4	synonymous	True	
+R91S	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S111T	gnomAD_v4	missense	True	
+S112P	gnomAD_v4	missense	True	
+S114G	gnomAD_v4	missense	True	
+S114T	gnomAD_v4	missense	True	
+S14=	gnomAD_v4	synonymous	True	
+S14R	gnomAD_v4	missense	True	
+S155=	gnomAD_v4	synonymous	True	
+S155L	gnomAD_v4	missense	True	
+S155P	gnomAD_v4	missense	True	
+S167=	gnomAD_v4	synonymous	True	
+S167P	gnomAD_v4	missense	True	
+S168=	gnomAD_v4	synonymous	True	
+S168C	gnomAD_v4	missense	True	
+S242=	gnomAD_v4	synonymous	True	
+S245=	gnomAD_v4	synonymous	True	
+S249=	gnomAD_v4	synonymous	True	
+S249del	gnomAD_v4	inframe_indel	True	
+S251G	gnomAD_v4	missense	True	
+S251R	gnomAD_v4	missense	True	
+S262=	gnomAD_v4	synonymous	True	
+S262L	gnomAD_v4	missense	True	
+S262P	ClinVar|gnomAD_v4|literature_PMID30256984	missense	True	Uncertain significance
+S292=	gnomAD_v4	synonymous	True	
+S292C	ClinVar	missense	False	no classification provided (evidence_only)
+S292F	gnomAD_v4	missense	True	
+S292T	gnomAD_v4	missense	True	
+S299=	gnomAD_v4	synonymous	True	
+S299I	gnomAD_v4	missense	True	
+S299R	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S2G	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S2I	gnomAD_v4	missense	True	
+S2N	gnomAD_v4	missense	True	
+S2R	gnomAD_v4	missense	True	
+S300=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+S300F	gnomAD_v4	missense	True	
+S302=	gnomAD_v4	synonymous	True	
+S302C	gnomAD_v4	missense	True	
+S302F	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S304=	gnomAD_v4	synonymous	True	
+S304I	gnomAD_v4	missense	True	
+S304N	gnomAD_v4	missense	True	
+S304R	gnomAD_v4	missense	True	
+S313=	gnomAD_v4	synonymous	True	
+S313Y	gnomAD_v4	missense	True	
+S316=	gnomAD_v4	synonymous	True	
+S316G	gnomAD_v4	missense	False	
+S316I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S356=	gnomAD_v4	synonymous	True	
+S356C	gnomAD_v4	missense	True	
+S356Y	gnomAD_v4	missense	True	
+S362=	gnomAD_v4	synonymous	True	
+S371=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+S371Y	gnomAD_v4	missense	False	
+S387R	gnomAD_v4	missense	False	
+S388N	gnomAD_v4	missense	False	
+S388R	gnomAD_v4	missense	False	
+S389del	gnomAD_v4	inframe_indel	True	
+S396=	gnomAD_v4	synonymous	True	
+S396G	gnomAD_v4	missense	False	
+S396R	gnomAD_v4	missense	False	
+S396T	gnomAD_v4	missense	True	
+S398=	gnomAD_v4	synonymous	False	
+S398C	gnomAD_v4	missense	True	
+S398F	gnomAD_v4	missense	True	
+S398P	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S401L	gnomAD_v4	missense	True	
+S401P	gnomAD_v4	missense	False	
+S413T	gnomAD_v4	missense	True	
+S419=	gnomAD_v4	synonymous	True	
+S419Y	gnomAD_v4	missense	True	
+S429G	gnomAD_v4	missense	True	
+S429R	gnomAD_v4	missense	True	
+S430=	gnomAD_v4	synonymous	True	
+S430L	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S430P	gnomAD_v4	missense	True	
+S447=	gnomAD_v4	synonymous	True	
+S447A	gnomAD_v4	missense	True	
+S447L	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S458F	gnomAD_v4	missense	True	
+S461G	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+S465G	gnomAD_v4	missense	True	
+S465N	gnomAD_v4	missense	True	
+S465T	gnomAD_v4	missense	True	
+S505=	gnomAD_v4	synonymous	True	
+S505N	gnomAD_v4	missense	True	
+S510N	gnomAD_v4	missense	True	
+S517N	gnomAD_v4	missense	True	
+S517R	gnomAD_v4	missense	True	
+S56C	gnomAD_v4	missense	True	
+S56F	gnomAD_v4	missense	True	
+S5P	gnomAD_v4	missense	True	
+S68G	gnomAD_v4	missense	True	
+S68N	gnomAD_v4	missense	True	
+S6F	gnomAD_v4	missense	True	
+S77=	gnomAD_v4	synonymous	True	
+S87=	gnomAD_v4	synonymous	True	
+S87I	gnomAD_v4	missense	True	
+S87N	gnomAD_v4	missense	True	
+S88P	ClinGen_CCID:009414|gnomAD_v4	missense	True	
+S8=	gnomAD_v4	synonymous	True	
+S8N	gnomAD_v4	missense	True	
+T117I	gnomAD_v4	missense	True	
+T140I	gnomAD_v4	missense	True	
+T17A	gnomAD_v4	missense	True	
+T17P	gnomAD_v4	missense	False	
+T189=	gnomAD_v4	synonymous	True	
+T189M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T237=	ClinVar|gnomAD_v4	synonymous	True	Benign
+T237I	gnomAD_v4	missense	True	
+T244I	gnomAD_v4	missense	True	
+T246I	gnomAD_v4	missense	True	
+T246N	gnomAD_v4	missense	True	
+T246S	gnomAD_v4	missense	True	
+T271I	gnomAD_v4	missense	True	
+T29=	gnomAD_v4	synonymous	True	
+T29N	gnomAD_v4	missense	True	
+T307I	gnomAD_v4	missense	True	
+T310=	gnomAD_v4	synonymous	True	
+T330=	gnomAD_v4	synonymous	True	
+T355I	gnomAD_v4	missense	True	
+T355S	ClinVar	missense	False	Uncertain significance
+T366I	gnomAD_v4	missense	False	
+T375=	gnomAD_v4	synonymous	True	
+T375I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T375N	gnomAD_v4	missense	False	
+T38=	gnomAD_v4	synonymous	True	
+T38I	gnomAD_v4	missense	True	
+T38del	gnomAD_v4	inframe_indel	True	
+T390=	gnomAD_v4	synonymous	True	
+T390K	gnomAD_v4	missense	False	
+T390M	gnomAD_v4	missense	True	
+T393=	gnomAD_v4	synonymous	True	
+T393A	gnomAD_v4	missense	True	
+T393I	gnomAD_v4	missense	True	
+T393S	gnomAD_v4|literature_PMID30256984	missense	True	
+T412=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+T412M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T412R	gnomAD_v4	missense	True	
+T422A	gnomAD_v4	missense	True	
+T422I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T422S	gnomAD_v4	missense	True	
+T432I	gnomAD_v4	missense	True	
+T490=	gnomAD_v4	synonymous	True	
+T490I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T493=	gnomAD_v4	synonymous	True	
+T493S	gnomAD_v4	missense	True	
+T507=	gnomAD_v4	synonymous	True	
+T507I	gnomAD_v4	missense	True	
+T51=	gnomAD_v4	synonymous	True	
+T51N	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T60=	gnomAD_v4	synonymous	True	
+T60A	gnomAD_v4	missense	True	
+T60I	gnomAD_v4	missense	True	
+T60N	gnomAD_v4	missense	True	
+T70=	gnomAD_v4	synonymous	True	
+T70S	gnomAD_v4	missense	True	
+T86=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+T86M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+T86R	gnomAD_v4	missense	True	
+V120=	gnomAD_v4	synonymous	True	
+V120F	gnomAD_v4	missense	True	
+V129L	gnomAD_v4	missense	True	
+V134=	gnomAD_v4	synonymous	True	
+V134L	gnomAD_v4	missense	True	
+V134M	gnomAD_v4	missense	True	
+V145=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+V149F	gnomAD_v4	missense	True	
+V149I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V169M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V203=	gnomAD_v4	synonymous	False	
+V203G	gnomAD_v4	missense	True	
+V206M	gnomAD_v4	missense	True	
+V214=	gnomAD_v4	synonymous	True	
+V214A	gnomAD_v4	missense	True	
+V214M	ClinVar|gnomAD_v4	missense	True	Likely benign
+V217=	gnomAD_v4	synonymous	True	
+V217I	gnomAD_v4	missense	True	
+V222=	gnomAD_v4	synonymous	True	
+V222M	gnomAD_v4	missense	True	
+V227=	gnomAD_v4	synonymous	True	
+V228=	gnomAD_v4	synonymous	True	
+V228F	ClinVar|gnomAD_v4	missense	True	Conflicting classifications of pathogenicity
+V228I	ClinVar|gnomAD_v4|literature_PMID30256984	missense	True	Uncertain significance
+V228del	ClinVar|gnomAD_v4	inframe_indel	True	Uncertain significance
+V230L	gnomAD_v4	missense	True	
+V230M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V259A	gnomAD_v4	missense	True	
+V259M	gnomAD_v4	missense	True	
+V260=	gnomAD_v4	synonymous	False	
+V260D	gnomAD_v4	missense	True	
+V260F	gnomAD_v4	missense	True	
+V26I	gnomAD_v4	missense	True	
+V26L	gnomAD_v4	missense	True	
+V274=	gnomAD_v4	synonymous	True	
+V274G	gnomAD_v4	missense	True	
+V275=	gnomAD_v4	synonymous	True	
+V275I	gnomAD_v4	missense	True	
+V281=	gnomAD_v4	synonymous	True	
+V281A	gnomAD_v4	missense	True	
+V288A	gnomAD_v4	missense	True	
+V288F	gnomAD_v4	missense	True	
+V289A	gnomAD_v4	missense	True	
+V301=	gnomAD_v4	synonymous	True	
+V301A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V301F	ClinVar	missense	False	Uncertain significance
+V301I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V318L	gnomAD_v4	missense	True	
+V350L	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V36=	gnomAD_v4	synonymous	True	
+V41=	gnomAD_v4	synonymous	True	
+V41I	gnomAD_v4	missense	True	
+V431=	gnomAD_v4	synonymous	True	
+V431G	gnomAD_v4	missense	False	
+V431M	ClinVar	missense	False	Uncertain significance
+V437M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V455E	gnomAD_v4	missense	True	
+V455I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V455L	gnomAD_v4	missense	True	
+V47=	gnomAD_v4	synonymous	False	
+V487=	gnomAD_v4	synonymous	True	
+V487D	gnomAD_v4	missense	True	
+V487F	gnomAD_v4	missense	True	
+V487I	gnomAD_v4	missense	True	
+V489=	gnomAD_v4	synonymous	True	
+V489A	gnomAD_v4	missense	True	
+V489F	gnomAD_v4	missense	True	
+V489G	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V489I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V494=	gnomAD_v4	synonymous	True	
+V494A	gnomAD_v4	missense	True	
+V494L	gnomAD_v4	missense	True	
+V49=	ClinVar|gnomAD_v4	synonymous	True	Likely benign
+V49M	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V509=	gnomAD_v4	synonymous	True	
+V509L	gnomAD_v4	missense	True	
+V50A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V50I	gnomAD_v4	missense	True	
+V523A	gnomAD_v4	missense	True	
+V66A	gnomAD_v4	missense	True	
+V66F	gnomAD_v4	missense	True	
+V66I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V78=	gnomAD_v4	synonymous	True	
+V78A	gnomAD_v4	missense	True	
+V78M	ClinVar|gnomAD_v4|literature_PMID30256984	missense	True	Uncertain significance
+V80A	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V80L	gnomAD_v4	missense	True	
+V84=	gnomAD_v4	synonymous	True	
+V85L	gnomAD_v4	missense	True	
+V97=	gnomAD_v4	synonymous	True	
+V97A	gnomAD_v4	missense	True	
+V97I	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+V97L	gnomAD_v4	missense	True	
+V98=	gnomAD_v4	synonymous	True	
+V98M	gnomAD_v4	missense	True	
+W166R	gnomAD_v4	missense	True	
+W182G	literature_PMID30256984	missense	False	
+W182R	gnomAD_v4	missense	True	
+W311R	gnomAD_v4	missense	True	
+W327C	gnomAD_v4	missense	True	
+W327R	gnomAD_v4	missense	True	
+W93C	gnomAD_v4	missense	True	
+W93R	gnomAD_v4	missense	True	
+Y107=	gnomAD_v4	synonymous	True	
+Y126=	gnomAD_v4	synonymous	True	
+Y126C	gnomAD_v4	missense	True	
+Y127C	gnomAD_v4	missense	True	
+Y127D	gnomAD_v4	missense	True	
+Y131=	gnomAD_v4	synonymous	True	
+Y131H	gnomAD_v4	missense	True	
+Y135=	gnomAD_v4	synonymous	True	
+Y150=	gnomAD_v4	synonymous	True	
+Y150C	gnomAD_v4	missense	True	
+Y150S	gnomAD_v4	missense	True	
+Y188C	gnomAD_v4	missense	True	
+Y208=	gnomAD_v4	synonymous	True	
+Y208H	gnomAD_v4	missense	True	
+Y286=	gnomAD_v4	synonymous	True	
+Y286S	gnomAD_v4	missense	True	
+Y324C	gnomAD_v4	missense	True	
+Y344=	gnomAD_v4	synonymous	True	
+Y344C	gnomAD_v4	missense	True	
+Y345=	gnomAD_v4	synonymous	True	
+Y345C	gnomAD_v4	missense	True	
+Y345F	gnomAD_v4	missense	True	
+Y411H	ClinVar|gnomAD_v4	missense	True	Uncertain significance
+Y411N	ClinVar	missense	False	Uncertain significance
+Y462=	gnomAD_v4	synonymous	True	
+Y53=	gnomAD_v4	synonymous	True	
+Y53C	gnomAD_v4	missense	True	
+Y57=	gnomAD_v4	synonymous	True	
+Y57C	gnomAD_v4	missense	True	

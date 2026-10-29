@@ -24,26 +24,24 @@ that was rejected and why).
 
 Class rules. Variant (a, b): the `class` column of merged_variant_scores.tsv --
 cAMP and surface are cut first and abundance is consulted only to split
-destabilized from not-delivered. Position (c, d): a gate is affected when the
+destabilized from trafficking defect. Position (c, d): a gate is affected when the
 position mean is past its cut, and the position takes the most upstream affected
 gate (abundance > surface > cAMP). The two rules share the five class names and
 colours, which is what the single key under the snake refers to; applied to the
 same unit they would disagree on 2.2 % of variants.
 
-LEGEND (the text that used to sit above the Sankey; paste into the caption):
-    Variant effects across the three phenotypes. (Top left, top middle) All 9,927
-    missense variants in DMS effect units. Dashed lines mark two synonymous SDs,
-    which is a different effect value in each assay: cAMP -0.372, abundance
-    -0.338, surface -0.442. rho is Spearman. (Bottom left) All 528 assayed
-    positions routed through the three assays; a gate counts as affected when the
-    position mean falls past that assay's cut. 105 positions are affected at one
-    gate or more; none loses abundance alone, and none that loses abundance
-    spares surface. Ribbon width is the number of positions, and the eight paths
-    through the three gates are the five mechanism classes. (Right) GPCRdb snake
-    plot coloured by position class.
+LEGEND. The caption lives in figure_legends.md at the repository root; keep the two
+in step. The one trap it has to spell out: panel d labels PATHS, not classes, and the
+destabilized class is split across two of them. The ribbon reading "Destabilized (30)"
+is the (1,1,1) path; the other 2 destabilized positions take (1,1,0) -- they lose
+abundance and surface but keep cAMP -- and fall under min_label, so they are unlabelled.
+A reader who takes 30 as the class size is off by 2 against the position-class table
+printed below. The other thing worth stating is that a and b are coloured by the
+VARIANT rule while c and d use the POSITION rule; they share names and colours and
+would disagree on 2.2 % of variants applied to the same unit.
 
 Whether the assays really act in series is not argued here. It was tested
-separately (that code is not in this repository): abundance acts on cAMP only through
+separately by scripts/analysis/dag_model_test.py: abundance acts on cAMP only through
 surface (partial rho = +0.03, p = 0.49; adding abundance to a surface-only model
 of position-mean cAMP buys -0.02 out-of-fold R2), and the dependence of cAMP on
 surface is graded rather than a threshold (cAMP survives surface z -2 to -3 in
@@ -56,18 +54,18 @@ from scipy.stats import spearmanr
 # exact house palette (user swatch; gpr161_analysis/scripts/gpr161_style.py)
 RED, BLUE, PURPLE, GREEN = "#8F2924", "#4877B5", "#65159E", "#316B3E"
 GREY1, GREY2, GREY3, GREY4 = "#808180", "#979798", "#CDCECE", "#E2E2E2"
-COL = {"WT-like": GREY3, "uncoupled": RED, "not delivered": BLUE,
+COL = {"WT-like": GREY3, "uncoupled": RED, "trafficking defect": BLUE,
        "destabilized": PURPLE, "surface-loss only": GREEN}
-KEY_ORDER = ["uncoupled", "not delivered", "destabilized", "surface-loss only", "WT-like"]
-DISP = {"uncoupled": "Uncoupled", "not delivered": "Not delivered",
+KEY_ORDER = ["uncoupled", "trafficking defect", "destabilized", "surface-loss only", "WT-like"]
+DISP = {"uncoupled": "Uncoupled", "trafficking defect": "Trafficking defect",
         "destabilized": "Destabilized", "surface-loss only": "Surface-loss only",
         "WT-like": "WT-like"}
 # WT-like's fill is too light to read as 6 pt text, so its LABEL uses a darker grey
 # of the same family; the ribbon and swatch keep the fill colour.
 TXT = dict(COL); TXT["WT-like"] = GREY1
-DRAW = ["WT-like", "surface-loss only", "destabilized", "not delivered", "uncoupled"]
+DRAW = ["WT-like", "surface-loss only", "destabilized", "trafficking defect", "uncoupled"]
 SHORT = {"WT-like": "WT-like", "signaling-selective (expressed, uncoupled)": "uncoupled",
-         "trafficking-defective (made, not delivered)": "not delivered",
+         "trafficking-defective (made, not delivered)": "trafficking defect",
          "destabilized (low abundance -> low surface)": "destabilized",
          "surface-loss, signaling-intact": "surface-loss only"}
 
@@ -88,13 +86,34 @@ SD = {a: float((m[f"{a}_eff"] / m[f"{a}_z"]).replace([np.inf, -np.inf], np.nan).
 CUT = {a: -2 * v for a, v in SD.items()}
 
 # ---------------------------------------------------------------- layout (mm)
-W, H = 165.0, 104.0
+# Three columns, two rows; the snake spans both rows on the right.
+#
+#     cartoon   |  surface vs abundance |  snake
+#     surface vs cAMP |  chain flow     |  (snake continues)  + colour key
+#
+# No panel letters are drawn. The flow's NODE BAND is made to span exactly the
+# same y range as the cAMP scatter's plot box, so the two bottom panels line up
+# top and bottom; its stage labels sit in the row gap above and the axes keep a
+# strip below for the class counts.
+W, H = 165.0, 92.0
 fig = plt.figure(figsize=(W * MM, H * MM))
 
 
 def add_ax(x, top, w, h):
     return fig.add_axes([x / W, 1 - (top + h) / H, w / W, h / H])
 
+
+SNAKE_ASPECT = 0.824                 # w/h of the GPCRdb layout at r = 10.5
+R1, R2 = 4.0, 54.0                   # row tops
+CART = 44.0                          # cartoon slot, placed in Illustrator
+SC = 30.0                            # scatter axes, square
+X_SC1, X_SC2 = 66.0, 14.0            # scatter axes left edges (col 2, col 1)
+FLOW_W = 38.0
+LBL, NOTE = 4.0, 5.0                 # strips for the stage labels and the counts
+HS = LBL + SC + NOTE                 # flow axes box height
+X3 = X_SC1 + FLOW_W + 4              # snake column
+SN_W = W - 3 - X3
+SN_H = SN_W / SNAKE_ASPECT
 
 LIM = {"cre": (-1.40, 1.10), "abundance": (-1.60, 0.90), "surface": (-1.90, 1.20)}
 TICK = {"cre": [-1, -0.5, 0, 0.5, 1], "abundance": [-1.5, -1, -0.5, 0, 0.5],
@@ -128,38 +147,45 @@ def scatter(ax, xa, ya):
             va="top", ha="left")
 
 
+# --------------------------------------------------------- cartoon slot (a) --
+# Reserved and left blank; the schematic is placed in Illustrator.
+add_ax(3, R1, CART, CART).set_axis_off()
+
+# ----------------------------------------------------------- the scatters ---
 # Surface is on x in BOTH panels: it is the shared reference the classes are cut
-# against, and the pair order (abundance then cAMP) matches the Sankey's left-to-
+# against, and the pair order (abundance then cAMP) matches the flow's left-to-
 # right order. Note this plots abundance, which is UPSTREAM of surface, on y --
 # the panel is a threshold map, not a regression, so the direction is not implied.
-SW, TOPS = 38.0, 8.0
-axA = add_ax(12, TOPS, SW, SW)
-scatter(axA, "surface", "abundance")
-axB = add_ax(62, TOPS, SW, SW)
-scatter(axB, "surface", "cre")
+scatter(add_ax(X_SC1, R1, SC, SC), "surface", "abundance")
+scatter(add_ax(X_SC2, R2, SC, SC), "surface", "cre")
 
-# ------------------------------------------------- d (lettered)  chain flow
-TOPC = 56.0
+# ------------------------------------------------------------- chain flow ---
 ALLPOS = set(posn.position)
 PATHS = gate_paths(GATES, ALLPOS)
 assert sum(q["n"] for q in PATHS) == len(ALLPOS)
 
-axC = add_ax(4, TOPC, 94, 44)
-sankey_axes(axC, PATHS, ["Abundance", "Surface", "cAMP"], COL, min_label=10,
-            row_labels=("Spared", "Affected"),
-            label_fmt=lambda q: (f"{DISP[q['cls']]} ({q['n']})", TXT[q["cls"]]))
+# Strictly proportional: every ribbon AND every node box is its count times one
+# scale, which is what lets a reader check 433:95 against the drawing. An earlier
+# draft compressed the WT-like band to make the five classes thicker; that also
+# rescaled the node boxes (Surface came out 1.01:1 while labelled 433:95), so it
+# was dropped. The cost is that the uncoupled ribbon is only ~0.5 mm.
+# top/bot put the node band exactly on the cAMP scatter's plot box.
+sankey_axes(add_ax(X_SC1, R2 - LBL, FLOW_W, HS), PATHS,
+            ["Abundance", "Surface", "cAMP"], COL, min_label=10,
+            row_labels=("WT-like", "LOF"),
+            top=(NOTE + SC) / HS, bot=NOTE / HS,
+            x0=0.13, x1=0.82, node_w=0.062, label_gap=2.3 / HS,
+            label_fmt=lambda q: (str(q["n"]), TXT[q["cls"]]))
 n_any = len(GATES["A"] | GATES["S"] | GATES["C"])
 n_A_only = len(GATES["A"] - GATES["S"] - GATES["C"])
 n_A_noS = len(GATES["A"] - GATES["S"])
 
+# ---------------------------------------------------------- snake + key -----
+# The flow labels ribbons with counts only, so this key is the single place that
+# maps colour to class name, for every panel.
+snake_axes(add_ax(X3, R1, SN_W, SN_H), categorical=pcls, catmap=COL, r=10.5)
 
-# ------------------------------------------------- c (lettered)  snake + key
-SX, SWID = 99.0, 61.0
-axD = add_ax(SX, 4.0, SWID, 84.0)
-snake_axes(axD, categorical=pcls, catmap=COL, r=10.5)
-
-# key: two columns, 3 + 2, directly under the snake
-axK = add_ax(SX + 3, 90.0, SWID - 2, 10.5)
+axK = add_ax(X3 - 2, R1 + SN_H + 4, SN_W + 4, 10.5)
 axK.set_xlim(0, 2); axK.set_ylim(3, 0); axK.axis("off")
 for i, k in enumerate(KEY_ORDER):
     cx, cy = divmod(i, 3)

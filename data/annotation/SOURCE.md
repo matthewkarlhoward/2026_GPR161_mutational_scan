@@ -1,8 +1,13 @@
 # Third-party data — GPCRdb
 
-The two files in this directory are **not** original to this study. They are
-redistributed from **GPCRdb** (<https://gpcrdb.org>). The copyright on the rest of this
-repository does not extend to them.
+Two files in this directory are **not** original to this study:
+`gpcrdb_generic_numbers.tsv` and `snakeplot_raw.svg`. They are redistributed from
+**GPCRdb** (<https://gpcrdb.org>), and the copyright on the rest of this repository does
+not extend to them.
+
+The other two files here are derived by this study and are covered by `LICENSE-DATA`:
+`structure_8smv.tsv` (built by `pipeline/03_structure_annotation.py`) and
+`human_alleles.tsv` (see `docs/DATA_SOURCES.md`).
 
 GPCRdb's [legal notice](https://docs.gpcrdb.org/legal_notice.html) licenses its **data**
 under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and its **source code**

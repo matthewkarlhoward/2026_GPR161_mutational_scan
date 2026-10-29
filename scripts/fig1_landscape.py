@@ -2,11 +2,11 @@
 """GPR161 landscape: score density + substitution heatmap, one row per phenotype.
 
 Density on the left, heatmap and its colour key on the right. Rows are
-surface / abundance / cAMP and share a row height, so both columns sit on the
+abundance / surface / cAMP and share a row height, so both columns sit on the
 same baseline for every assay.
 
 Raw DMS effect scores. The raw scale is already centred on the synonymous mean
-(+0.0001 surface / +0.0001 abundance / -0.0002 cAMP), so white = 0 is the mean
+(+0.0001 abundance / +0.0001 surface / -0.0002 cAMP), so white = 0 is the mean
 synonymous variant to within 2e-4.
 Diverging scale is BLUE = gain, RED = loss, built from the two palette colours
 in style.py (BLUE_GOF / RED_LOF). Note the sense: some earlier drafts of this
@@ -42,7 +42,7 @@ VMAX = 1.2                              # symmetric; clips 2.6% of values, all d
 # legend order is NOT draw order: synonymous is the null and reads first, but it
 # must still be drawn last so the missense fill does not cover it
 LEG_ORDER = ["Synonymous", "Missense", "Deletion"]
-ASSAYS = [("Surface", "surface"), ("Abundance", "abundance"), ("cAMP", "cre")]
+ASSAYS = [("Abundance", "abundance"), ("Surface", "surface"), ("cAMP", "cre")]
 
 # red -> white -> blue, from the palette colours rather than matplotlib's RdBu
 CMAP = LinearSegmentedColormap.from_list("lof_gof", [RED_LOF, "#ffffff", BLUE_GOF])
@@ -90,7 +90,7 @@ for i, (lab, arm) in enumerate(ASSAYS):
         axD.plot(xs, y, color=colour, lw=0.5)
     axD.set_xlim(*DLIM)
     top = max(l.get_ydata().max() for l in axD.lines)
-    axD.set_ylim(0, top * (1.85 if i == 0 else 1.06))
+    axD.set_ylim(0, top * (1.55 if i == 0 else 1.06))
     axD.set_yticks([])
     axD.set_ylabel(lab, fontsize=6, labelpad=1.5)
     axD.set_xticks([-1.5, -1.0, -0.5, 0.0, 0.5, 1.0])

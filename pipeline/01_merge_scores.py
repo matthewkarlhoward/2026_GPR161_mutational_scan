@@ -25,10 +25,11 @@ position + wildtype + mutation + type), with three derived quantities:
               but not exactly, the nominal one. cAMP and
               surface are cut first; abundance is consulted only to split a
               variant that is missing from the surface into one that was never
-              made (destabilized) and one that was made but not delivered:
+              made (destabilized) and one that was made but not delivered
+              to the surface (trafficking defect):
 
-                  surface & cAMP lost   -> destabilized   (abundance also lost)
-                                        -> not delivered  (abundance intact)
+                  surface & cAMP lost   -> destabilized        (abundance also lost)
+                                        -> trafficking defect  (abundance intact)
                   surface lost only     -> surface-loss, signaling-intact
                   cAMP lost only        -> signaling-selective (uncoupled)
                   neither               -> WT-like

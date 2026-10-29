@@ -211,9 +211,17 @@ def sankey_axes(ax, paths, stages, colmap, label_classes=True, min_label=10,
                 ends[id(p)] = yd - h / 2
                 off[dst] += h
     if label_classes:
+        show = sorted([q for q in paths if q["n"] >= min_label],
+                      key=lambda q: -ends[id(q)])
+        # Ribbon heights are proportional, so when one class dominates the rest
+        # bunch together near the floor and their labels, pushed apart by
+        # label_gap, would cascade off the bottom of the axes. Lift the bunched
+        # stack to sit on the space it needs.
+        need = (len(show) - 1) * label_gap
         prev = 1e9
-        for p in sorted([q for q in paths if q["n"] >= min_label],
-                        key=lambda q: -ends[id(q)]):
+        for j, p in enumerate(show):
+            if j == 1:
+                prev = min(prev, max(ends[id(p)], need) + label_gap)
             y = min(ends[id(p)], prev - label_gap)
             txt, tcol = (label_fmt(p) if label_fmt
                          else (f"{p['cls']}  {p['n']}", "#000000"))
@@ -266,12 +274,12 @@ def position_class(a, s, c):
     """The class is named for the most upstream AFFECTED gate.
 
     At the surface step the downstream cAMP gate is consulted as well, to split
-    "not delivered" from "surface-loss only". Nothing else looks downstream.
+    "trafficking defect" from "surface-loss only". Nothing else looks downstream.
     """
     if a:
         return "destabilized"
     if s:
-        return "not delivered" if c else "surface-loss only"
+        return "trafficking defect" if c else "surface-loss only"
     return "uncoupled" if c else "WT-like"
 
 

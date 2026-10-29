@@ -60,7 +60,9 @@ documented in `GPR161.yaml`.
 > Dumpling can emit Enrich2 and Rosace scores as well; those are not this study's scores,
 > which come from Lilace (step 2).
 
-Raw FASTQ files will be deposited in SRA; the accession goes here once assigned.
+Raw FASTQ files are deposited in the NCBI Sequence Read Archive under BioProject
+**PRJNA1551518** ("GPR161 deep mutational scan", 39 runs, submission SUB16590106,
+processed 2026-10-27).
 
 ## 2. Counts → scores (third-party software)
 

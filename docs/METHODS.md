@@ -193,7 +193,7 @@ surface   0.221162
 
 Adds `class`, the **variant-level** mechanism class, cut at z < -2. cAMP and surface are
 cut first, and abundance is consulted only to split a variant missing from the surface
-into one that was never made and one that was made but not delivered:
+into one that was never made and one that was made but trafficking defect:
 
 | surface | cAMP | abundance | class | n |
 |---|---|---|---|---|
@@ -228,14 +228,15 @@ One row per assayed position (528 rows):
 > linear summary of a curved relationship. It is reported for completeness; the figures
 > in this repository use `cre`, `abu` and `surf`. The robustness checks — LOWESS
 > conditioning, surface-matched controls, split-half noise handling, permutation — live
-> with the analysis that reports them and are not part of this repository yet.
+> with the analysis that reports them: `scripts/analysis/dag_model_test.py`, described
+> in the serial-chain section at the end of this document.
 
 ### Position-level classes are a different rule from variant-level classes
 
 The **position** rule (`scripts/style.py::position_gates`, `position_class`) treats the
 three assays as a chain and names the class for the **most upstream affected gate**: a
 gate is affected when the position mean z < -2; abundance affected -> `destabilized`;
-otherwise surface affected -> `not delivered` if cAMP is also lost, else `surface-loss
+otherwise surface affected -> `trafficking defect` if cAMP is also lost, else `surface-loss
 only`; otherwise cAMP affected -> `uncoupled`. Applied at variant level the two rules
 disagree on 2.2 % of calls (243 of 10,927); applied at position level, on 0.4 % (2 of
 528). Figure 2a,b are variant-level; Figure 2c,d are
@@ -258,8 +259,9 @@ handle three traps — the nonlinearity above, shared measurement noise across a
 (synonymous cross-assay Pearson r = 0.55 cAMP-surface, 0.48 surface-abundance, 0.40
 cAMP-abundance, handled by split-half estimation), and regression
 dilution from conditioning on a noisy mediator, which biases the test *towards* finding a
-direct path, so a null is the strong result. **The code for it is not in this repository
-yet**; it arrives with the figure that reports it.
+direct path, so a null is the strong result. The code is
+`scripts/analysis/dag_model_test.py`; the serial-chain section at the end of this
+document reports what it returns.
 
 ## 6. Numbering and mapping
 
@@ -302,3 +304,13 @@ The heatmaps in Figure 1c use a separate diverging scale built from `BLUE_GOF #3
 (gain) and `RED_LOF #9e2b26` (loss), symmetric at ±1.2 raw effect units, which clips
 2.6 % of values — all of them deep loss. Note this is the **reverse** of the blue-is-loss
 convention used in some earlier drafts.
+
+
+## Serial-chain test
+
+The claim that abundance acts on cAMP only through surface is tested by
+`scripts/analysis/dag_model_test.py`. It conditions with LOWESS rather than a
+line (cAMP ~ surface saturates), uses split-half estimates to handle noise the
+assays share (synonymous cross-assay rho ~ 0.55), and compares fixed-width
+surface bins. Conditional on surface, abundance carries no further information
+about cAMP: weighted mean rho = -0.003 over fixed 0.5-z bins.

@@ -29,8 +29,8 @@ license:
   - MIT
   - CC-BY-4.0
 # v1.0.0 is reserved for the version submitted with the manuscript; see docs/RELEASING.md
-version: 0.1.0
-date-released: '2026-10-26'
+version: 0.2.0
+date-released: '2026-10-28'
 keywords:
   - deep mutational scanning
   - GPR161
