@@ -197,8 +197,8 @@ latest version:
 > Howard, M. K. GPR161 deep mutational scan. Zenodo.
 > doi:[10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577)
 
-Each release also gets its own version DOI (v0.1.0 is
-[10.5281/zenodo.23682578](https://doi.org/10.5281/zenodo.23682578)). Citation metadata is
+Each release also gets its own version DOI (v0.2.0 is
+[10.5281/zenodo.23754402](https://doi.org/10.5281/zenodo.23754402)). Citation metadata is
 in [`CITATION.cff`](CITATION.cff), which GitHub renders as **Cite this repository**, and
 in [`.zenodo.json`](.zenodo.json); the release procedure is in
 [`docs/RELEASING.md`](docs/RELEASING.md).

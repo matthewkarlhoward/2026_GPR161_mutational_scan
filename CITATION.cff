@@ -23,8 +23,8 @@ identifiers:
     value: 10.5281/zenodo.23682577
     description: Concept DOI - always resolves to the latest version
   - type: doi
-    value: 10.5281/zenodo.23682578
-    description: Version DOI for v0.1.0
+    value: 10.5281/zenodo.23754402
+    description: Version DOI for v0.2.0
 license:
   - MIT
   - CC-BY-4.0
