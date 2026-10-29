@@ -5,6 +5,7 @@ The repository is connected to Zenodo. Deposited versions:
 | | |
 |---|---|
 | concept DOI (cite this) | [10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577) |
+| v3.0.0 | [10.5281/zenodo.23755947](https://doi.org/10.5281/zenodo.23755947) |
 | v0.2.0 | [10.5281/zenodo.23754402](https://doi.org/10.5281/zenodo.23754402) |
 | v0.1.0 | [10.5281/zenodo.23682578](https://doi.org/10.5281/zenodo.23682578) |
 
