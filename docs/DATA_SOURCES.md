@@ -205,7 +205,6 @@ other figures of the paper. Listed so the reference list can be assembled in one
 | Ensembl VEP ⚠️ | variant consequence mapping | McLaren, W. et al. *Genome Biology* **17**, 122 (2016) |
 | MaveDB ⚠️ | intended deposit for these scores | Esposito, D. et al. *Genome Biology* **20**, 223 (2019) |
 | Prior GPCR DMS used for comparison ✅ | β2AR: Jones, E. M. et al. *eLife* **9**, e54895 (2020) · MC4R: Howard, C. J. et al. *eLife* **13** (2025) · GPCRome survey: Tedman, A. et al. *Nat. Commun.* (2026), doi:10.1038/s41467-026-76564-7 | |
-| Cosmos ⚠️ | causal decomposition of direct/indirect variant effects | Rao, J., Wang, M., Howard, M., Coyote-Maestas, W. & Pimentel, H. *bioRxiv* (2025), doi:10.1101/2025.08.01.667517 |
 
 GPR161 biology background used in the introduction (all verified against the proposal's
 reference list): Mukhopadhyay et al. *Cell* **152**, 210-223 (2013); Hwang et al. *eLife*

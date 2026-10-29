@@ -244,7 +244,7 @@ def sankey_axes(ax, paths, stages, colmap, label_classes=True, min_label=10,
 # ~19 variants per position >= 3 is 2.8x the expected count for abundance and
 # 1.0x for surface, which made the abundance-dependent split (destabilized vs not
 # delivered) a function of the threshold. The mean rule also puts Y208 and Y324
-# in "uncoupled", agreeing with the Cosmos signalling-specific calls.
+# in "uncoupled"; both are in the G protein binding site that Figure 4c shows.
 POSITION_GATE = "mean"
 CUT, MINVAR = -2.0, 3
 _GCOL = {"A": ("abu", "abundance_z", "abundance_lfsr"),
