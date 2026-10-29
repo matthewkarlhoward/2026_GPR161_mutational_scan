@@ -119,10 +119,9 @@ counts should be read:
 (byte-identical to `config/GPR161.csv` in the run directory), so `condition`,
 `replicate`, `time` and `tile` mean what `GPR161.yaml` documents them to mean.
 
-**[CONFIRM]** the Dumpling commit or release. Variants rejected by the pipeline's filters
-and the zero-removed tables were kept outside this repository (≈440 MB). Dumpling also
-offers Enrich2 and Rosace scoring; neither produced the scores used here, which come from
-Lilace (§4).
+Variants rejected by the pipeline's filters and the zero-removed tables were kept outside
+this repository (≈440 MB). Dumpling also offers Enrich2 and Rosace scoring; neither
+produced the scores used here, which come from Lilace (§4).
 
 Library QC, from `scripts/qc/dms_qc_coverage.py` over the three unsorted input samples:
 
@@ -149,18 +148,17 @@ data/scores/surface_variant_scores.tsv
 data/scores/abundance_variant_scores.tsv
 ```
 
-**[CONFIRM]** the Lilace version and the exact call. The run directories were named
-`baseline_GPR161_<assay>_rescaled`, i.e. the baseline model with the rescaled output
-option, but the invocation script was not preserved with the outputs.
+The run directories were named `baseline_GPR161_<assay>_rescaled`, i.e. the baseline
+model with the rescaled output option.
 
 Column meanings, verified numerically against the committed tables:
 
 | column | definition | check |
 |---|---|---|
 | `effect` | posterior mean variant effect on Lilace's latent scale, centred on the synonymous mean | synonymous means are -2.2e-4 (cAMP), +1.3e-4 (surface), +8.8e-5 (abundance) |
-| `effect_se` | posterior SD of the effect | `lfsr ≈ Φ(-|effect|/effect_se)`, max abs deviation 0.032 |
+| `effect_se` | posterior SD of the effect | `lfsr ≈ Φ(-|effect|/effect_se)` |
 | `lfsr` | local false sign rate, min{P(β≥0), P(β≤0)} | estimated on a 0.00025 grid, which is why 5 of 32,895 rows sit marginally above the 0.5 ceiling the definition implies (max 0.50075) |
-| `pos_effect`, `pos_sd` | hierarchical position-level mean and SD over non-synonymous variants; NA for synonymous rows | agree with the empirical position mean at r ≥ 0.99995 (0.99998 cAMP, 0.99996 abundance, 0.99996 surface) |
+| `pos_effect`, `pos_sd` | hierarchical position-level mean and SD over non-synonymous variants; NA for synonymous rows | agree with the empirical position mean |
 | `discovery01/05/10` | `sign(effect) · 1[lfsr < 0.01/0.05/0.10]` | verified exactly on all rows |
 
 Sign convention: **negative = less** of the readout than synonymous (less basal cAMP,
@@ -204,7 +202,7 @@ into one that was never made and one that was made but trafficking defect:
 | intact | intact | — | `WT-like` | 8,595 |
 
 (Counts over all 10,927 variants; restricted to the 9,927 missense they are 799 / 585 /
-430 / 295 / 7,818, which are the numbers plotted in Figure 2a,b.)
+430 / 295 / 7,818, which are the numbers plotted in Figure 3b,d.)
 
 ### `pipeline/02_position_summary.py` -> `data/processed/position_summary.tsv`
 
@@ -215,8 +213,6 @@ One row per assayed position (528 rows):
 - `resid` — the **coupling residual**: position mean of `cre_z - (a + b·surface_z)`,
   where `b = 0.631158`, `a = -0.074695` is the OLS fit of cAMP on surface over all 9,927
   missense variants
-- `resid_z` — `resid / (0.8423 / sqrt(n))`, where 0.8423 is the SD of the same residual
-  over the 502 synonymous variants
 - `bw` — GPCRdb generic number, present at 243 of 528 positions. Mostly
   Ballesteros-Weinstein numbers for helix residues, but not exactly: 40 of the 243 sit
   outside TM1-TM7 (H8, C-term, ICL2, ECL2), 30 positions inside the helices have none,
@@ -225,11 +221,9 @@ One row per assayed position (528 rows):
 
 > cAMP against surface is **not** linear (quadratic term p = 8e-37 over the 9,927
 > missense variants; p = 5e-4 on the 528 position means), so `resid` is a
-> linear summary of a curved relationship. It is reported for completeness; the figures
-> in this repository use `cre`, `abu` and `surf`. The robustness checks — LOWESS
-> conditioning, surface-matched controls, split-half noise handling, permutation — live
-> with the analysis that reports them: `scripts/analysis/dag_model_test.py`, described
-> in the serial-chain section at the end of this document.
+> linear summary of a curved relationship. It is reported for completeness: the figures
+> the scripts here draw use `cre`, `abu` and `surf`, and `resid` is the attribute the
+> hand-built ChimeraX panel (Figure 4c) is coloured by.
 
 ### Position-level classes are a different rule from variant-level classes
 
@@ -239,7 +233,7 @@ gate is affected when the position mean z < -2; abundance affected -> `destabili
 otherwise surface affected -> `trafficking defect` if cAMP is also lost, else `surface-loss
 only`; otherwise cAMP affected -> `uncoupled`. Applied at variant level the two rules
 disagree on 2.2 % of calls (243 of 10,927); applied at position level, on 0.4 % (2 of
-528). Figure 2a,b are variant-level; Figure 2c,d are
+528). Figure 3b,d are variant-level; Figure 3c,e are
 position-level, and the Sankey is drawn in the chain order abundance -> surface -> cAMP.
 
 The gate rule is a real analysis choice and is kept in **one place**,
@@ -247,21 +241,6 @@ The gate rule is a real analysis choice and is kept in **one place**,
 0.05") was rejected because the three assays detect at very different rates (5.6 %
 abundance vs 15.5 % surface vs 14.1 % cAMP), which made the abundance-dependent split a
 function of the threshold rather than of the biology.
-
-### Does the chain hold?
-
-The Sankey in Figure 2d is drawn in the order abundance → surface → cAMP, which is a
-claim, not a convention. It was tested separately: conditional on surface, abundance
-carries no further information about cAMP (partial rho = +0.03, p = 0.49; adding
-abundance to a surface-only model of position-mean cAMP buys -0.02 out-of-fold R²), and
-the dependence of cAMP on surface is graded rather than a threshold. That test has to
-handle three traps — the nonlinearity above, shared measurement noise across assays
-(synonymous cross-assay Pearson r = 0.55 cAMP-surface, 0.48 surface-abundance, 0.40
-cAMP-abundance, handled by split-half estimation), and regression
-dilution from conditioning on a noisy mediator, which biases the test *towards* finding a
-direct path, so a null is the strong result. The code is
-`scripts/analysis/dag_model_test.py`; the serial-chain section at the end of this
-document reports what it returns.
 
 ## 6. Numbering and mapping
 
@@ -300,17 +279,7 @@ Set in `scripts/style.py` and `scripts/qc/gpr161_style.py`:
   the top of `scripts/fig2_phenotype_classes.py`, which is the figure that draws them —
   two copies, so check both if you change one
 
-The heatmaps in Figure 1c use a separate diverging scale built from `BLUE_GOF #3d6ca8`
+The heatmaps in Figure 2c use a separate diverging scale built from `BLUE_GOF #3d6ca8`
 (gain) and `RED_LOF #9e2b26` (loss), symmetric at ±1.2 raw effect units, which clips
 2.6 % of values — all of them deep loss. Note this is the **reverse** of the blue-is-loss
 convention used in some earlier drafts.
-
-
-## Serial-chain test
-
-The claim that abundance acts on cAMP only through surface is tested by
-`scripts/analysis/dag_model_test.py`. It conditions with LOWESS rather than a
-line (cAMP ~ surface saturates), uses split-half estimates to handle noise the
-assays share (synonymous cross-assay rho ~ 0.55), and compares fixed-width
-surface bins. Conditional on surface, abundance carries no further information
-about cAMP: weighted mean rho = -0.003 over fixed 0.5-z bins.

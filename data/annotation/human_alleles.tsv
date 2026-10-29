@@ -754,7 +754,7 @@ S77=	gnomAD_v4	synonymous	True
 S87=	gnomAD_v4	synonymous	True	
 S87I	gnomAD_v4	missense	True	
 S87N	gnomAD_v4	missense	True	
-S88P	ClinGen_CCID:009414|gnomAD_v4	missense	True	
+S88P	gnomAD_v4	missense	True	
 S8=	gnomAD_v4	synonymous	True	
 S8N	gnomAD_v4	missense	True	
 T117I	gnomAD_v4	missense	True	

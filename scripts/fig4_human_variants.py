@@ -136,7 +136,7 @@ axes[-1].legend(handles=[Line2D([], [], ls="", marker="o", ms=2.2,
                 frameon=False)
 
 # ------------------------------------------------------------------ b -------
-# Was a stack to 100 %, where four ~85 % grey columns read as "these all look
+# Was a stack to 100 %, where three ~85 % grey columns read as "these all look
 # the same" and hid a 2.5-fold spread. Dropping WT-like and letting the bars top
 # out near 21 % shows the depletion AND its composition in one object.
 axb = fig.add_subplot(gs[0, 1])

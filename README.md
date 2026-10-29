@@ -27,12 +27,11 @@ data/
   scores/       Lilace output, one table per assay (cre / surface / abundance)
   processed/    merged variant table + position table, built by pipeline/
   annotation/   GPCRdb snake-plot layout, generic numbers, and the 8SMV structural join
-  structure/    the 8SMV coordinates (fetched) and the ChimeraX attribute files
+  structure/    the 8SMV coordinates, fetched by pipeline/03 on its first run
 pipeline/       counts -> scores -> analysis tables
   dumpling/     the read-processing run: Snakemake config and construct reference
 scripts/        figure and analysis code
   qc/           library and sequencing QC (the QC supplement)
-  structure/    the ChimeraX renders behind Figure 3
 figures/        figure panels written by the scripts (PDF + PNG)
 tables/         QC tables written by the scripts (CSV)
 docs/           METHODS.md, DATA_SOURCES.md, FIGURES.md, COLUMNS.md, RELEASING.md
@@ -59,16 +58,16 @@ python3 scripts/qc/dms_qc_coverage.py      # write tables/qc_*.csv; add --figure
 python3 scripts/qc/dms_qc_scores.py        # for larger standalone QC panels
 ```
 
-Two scripts are deliberately **not** in that list, and not in `run_all.sh`:
+One script is deliberately **not** in that list, and not in `run_all.sh`:
+`pipeline/04_human_alleles.py` rebuilds `data/annotation/human_alleles.tsv`, the input to
+Figure 5. It needs a clinical-variant crosswalk that is not redistributed here (it
+carries case-level clinical fields), so it cannot run from a fresh clone. The table it
+produces is committed instead, and the script records the derivation.
 
-- `pipeline/04_human_alleles.py` rebuilds `data/annotation/human_alleles.tsv`, the input
-  to Figure 5. It needs a clinical-variant crosswalk that is not redistributed here (it
-  carries case-level clinical fields), so it cannot run from a fresh clone. The table it
-  produces is committed instead, and the script records the derivation.
 Manuscript Figure 4 panels a and c are ChimeraX renders made by hand; see below.
 
 Panel e of the QC supplement is the FACS gating, exported from the cytometry software,
-and panel a of Figure 1 is the assay schematic — neither is drawn by code. Everything
+and panel a of Figure 2 is the assay schematic — neither is drawn by code. Everything
 else in the figures comes from the scripts above.
 
 ### Figure 4 panels a and c
@@ -137,7 +136,7 @@ produce `data/scores/`.
 > doi:[10.1186/s13059-026-03934-1](https://doi.org/10.1186/s13059-026-03934-1)
 
 **Topology diagram and generic numbering** — third-party data redistributed in
-`data/annotation/`, used for the snake plot in Figure 2 and the `bw` column of the
+`data/annotation/`, used for the snake plot in Figure 3 and the `bw` column of the
 position table. Cite all three if the generic numbers or the snake plot appear in a
 figure; the first two are what GPCRdb asks for.
 
@@ -166,8 +165,7 @@ figure; the first two are what GPCRdb asks for.
 > doi:[10.1038/s41586-022-04558-8](https://doi.org/10.1038/s41586-022-04558-8)
 > — MANE Select NM_001375883.1 / NP_001362812.1
 
-**Structure** used to interpret positions, and the source of the published point
-mutants this scan is benchmarked against
+**Structure** used to interpret positions, and the source of 8SMV
 
 > Hoppe, N. *et al.* GPR161 structure uncovers the redundant role of sterol-regulated
 > ciliary cAMP signaling in the Hedgehog pathway. *Nature Structural & Molecular Biology*
@@ -197,8 +195,8 @@ latest version:
 > Howard, M. K. GPR161 deep mutational scan. Zenodo.
 > doi:[10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577)
 
-Each release also gets its own version DOI (v0.2.0 is
-[10.5281/zenodo.23754402](https://doi.org/10.5281/zenodo.23754402)). Citation metadata is
+Each release also gets its own version DOI, listed on the Zenodo record under
+*Versions*. Citation metadata is
 in [`CITATION.cff`](CITATION.cff), which GitHub renders as **Cite this repository**, and
 in [`.zenodo.json`](.zenodo.json); the release procedure is in
 [`docs/RELEASING.md`](docs/RELEASING.md).

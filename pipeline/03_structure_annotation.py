@@ -34,9 +34,6 @@ CIF = ROOT / "data/structure/8smv.cif"
 OUT = ROOT / "data/annotation/structure_8smv.tsv"
 
 RECEPTOR, PARTNER = "R", ("A", "B", "G")        # 8SMV: R = GPR161, A = Gas
-# dSASA at the Gs interface used to be merged in here from a topos run in the
-# analysis workspace. The manuscript does not use it, so the dependency -- the
-# only path in this repository that pointed outside it -- was dropped 2026-10-28.
 
 
 def fetch_cif():

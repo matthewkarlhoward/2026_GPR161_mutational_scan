@@ -1,6 +1,6 @@
 # Releasing and archiving on Zenodo
 
-The repository is connected to Zenodo and **v0.2.0 is deposited**:
+The repository is connected to Zenodo. Deposited versions:
 
 | | |
 |---|---|
@@ -43,13 +43,16 @@ and each release its own **version DOI**. Every later GitHub release is automati
 new version under the same concept DOI — nothing extra to do, and nothing to re-upload.
 Cite the concept DOI in the paper so the citation keeps working as figures are added.
 
-Suggested scheme while the manuscript is in progress:
+The two repositories for this paper are **versioned together** from v3.0.0 on, so one
+number describes the state of both. They were numbered independently before that, and had
+reached v0.2.0 here and v1.1.0 in the companion repository, which is why the submitted
+version is 3.0.0 rather than 1.0.0.
 
 | tag | when |
 |---|---|
-| `v0.x.0` | pre-submission snapshots as figures are added |
-| `v1.0.0` | the version submitted with the manuscript |
-| `v1.x.0` | revisions during review |
+| `v0.x.0` | pre-submission snapshots of this repository alone |
+| `v3.0.0` | the version submitted with the manuscript, in both repositories |
+| `v3.x.0` | revisions during review, bumped in both repositories together |
 
 ## Metadata files
 
@@ -68,9 +71,8 @@ If you would rather the record itself read MIT, change that one field.
 
 - [x] the raw FASTQ are deposited and the SRA accession is written into
       `pipeline/README.md` §1 — BioProject PRJNA1551518, processed 2026-10-27
-- [ ] the six `[CONFIRM]` items in `docs/METHODS.md` and `docs/DATA_SOURCES.md` §4 are
-      resolved (Dumpling commit, Lilace version and call, and the reporter and
-      construct citations)
+- [ ] the `[CONFIRM]` item in `docs/METHODS.md` — cytometer, sort gates and cell
+      numbers — is resolved
 - [ ] `related_identifiers` in `.zenodo.json` gains the paper's DOI with
       `"relation": "isSupplementTo"` once it exists
 - [ ] scores are deposited in MaveDB and that accession is cross-referenced here

@@ -4,6 +4,8 @@
 FASTQ ──[1]──▶ data/counts/        ──[2]──▶ data/scores/      ──[3]──▶ data/processed/
       dumpling  78 samples ×        lilace  3 score tables     here    merged_variant_scores.tsv
                 11,043 variants                                        position_summary.tsv
+                                                                       + data/annotation/
+                                                                       structure_8smv.tsv
 ```
 
 Every stage operates on this study's own sequencing data. Steps **1** and **2** were run
@@ -55,10 +57,9 @@ experiment file (`config/GPR161.csv` in the run directory, byte-identical), so t
 `condition` / `replicate` / `time` / `tile` columns are read by Dumpling exactly as
 documented in `GPR161.yaml`.
 
-> **To record before submission:** the Dumpling commit or release used. The run also
-> produced rejected-read and zero-count tables (≈440 MB) that are not committed here.
-> Dumpling can emit Enrich2 and Rosace scores as well; those are not this study's scores,
-> which come from Lilace (step 2).
+The run also produced rejected-read and zero-count tables (≈440 MB) that are not
+committed here. Dumpling can emit Enrich2 and Rosace scores as well; those are not this
+study's scores, which come from Lilace (step 2).
 
 Raw FASTQ files are deposited in the NCBI Sequence Read Archive under BioProject
 **PRJNA1551518** ("GPR161 deep mutational scan", 39 runs, submission SUB16590106,
@@ -84,30 +85,31 @@ rather than in the file metadata):
 | `baseline_GPR161_surface_rescaled/variant_scores.tsv` | `data/scores/surface_variant_scores.tsv` |
 | `baseline_GPR161_abundance_rescaled/variant_scores.tsv` | `data/scores/abundance_variant_scores.tsv` |
 
-> **To record before submission:** the Lilace version and the exact call. The invocation
-> script was not preserved with the outputs.
-
-Lilace's own definitions were re-derived from the committed tables and all check out —
-`lfsr ≈ Φ(-|effect|/effect_se)` to within 0.032, `discoveryXX` exactly
-`sign(effect)·1[lfsr < XX/100]`, position-level means agreeing with the empirical means
-at r ≥ 0.99995. See `docs/METHODS.md` §4.
+Lilace's own definitions were re-derived from the committed tables and all check out:
+`lfsr` matches `Φ(-|effect|/effect_se)`, `discoveryXX` is exactly
+`sign(effect)·1[lfsr < XX/100]`, and the position-level means agree with the empirical
+position means. See `docs/METHODS.md` §4.
 
 ## 3. Scores → analysis tables (here)
 
 ```bash
-python3 pipeline/01_merge_scores.py       # -> data/processed/merged_variant_scores.tsv
-python3 pipeline/02_position_summary.py   # -> data/processed/position_summary.tsv
+python3 pipeline/01_merge_scores.py           # -> data/processed/merged_variant_scores.tsv
+python3 pipeline/02_position_summary.py       # -> data/processed/position_summary.tsv
+python3 pipeline/03_structure_annotation.py   # -> data/annotation/structure_8smv.tsv
 ```
 
 `01` inner-joins the three assay tables (10,927 variants measured in all three), converts
 each effect to its own assay's synonymous-SD units, and assigns the five variant-level
 mechanism classes. `02` collapses to positions, fits the cAMP~surface line used for the
-coupling residual, and attaches GPCRdb generic numbers.
+coupling residual, and attaches GPCRdb generic numbers. `03` joins the positions to PDB
+8SMV — downloading the entry into `data/structure/8smv.cif` on its first run — and records
+which positions are modelled and how far each one is from the G protein. All three are in
+`run_all.sh`.
 
-Both scripts print the constants they derive — the three synonymous SDs, the regression
-coefficients, the class counts — so a rerun that changes anything is visible immediately
-rather than silently. A rerun of both reproduces the two committed tables **byte for
-byte**.
+The scripts print the constants they derive — the three synonymous SDs, the regression
+coefficients, the class counts, the modelled range — so a rerun that changes anything is
+visible immediately rather than silently. A rerun reproduces all three committed tables
+**byte for byte**.
 
 The analysis choices these scripts encode — where the cut goes, which assay is consulted
 when, what a position-level call means — are documented in `docs/METHODS.md` §5, and the

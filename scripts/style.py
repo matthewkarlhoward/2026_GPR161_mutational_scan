@@ -17,7 +17,7 @@ LOSS = "#c0472a"                        # default outline colour in snake_axes()
 
 # ---- two-colour diverging scale used by the landscape heatmaps -------------
 # Sampled from the project swatch card. These two hexes are the poles of the
-# heatmap colour map in Figure 1c; changing them changes that figure.
+# heatmap colour map in Figure 2c; changing them changes that figure.
 BLUE_GOF = "#3d6ca8"        # gain of function / positive
 RED_LOF  = "#9e2b26"        # loss of function / negative
 
@@ -240,11 +240,11 @@ def sankey_axes(ax, paths, stages, colmap, label_classes=True, min_label=10,
 #   "count" >= MINVAR variants with z < CUT and lfsr < 0.05
 #
 # Chosen 2026-10-22. The count rule's flat threshold is not a flat bar: the three
-# assays detect at 5.6 % (abundance) vs 15.5 % (surface) and 14.1 % (cAMP), so at
-# ~19 variants per position >= 3 is 2.8x the expected count for abundance and
-# 1.0x for surface, which made the abundance-dependent split (destabilized vs not
-# delivered) a function of the threshold. The mean rule also puts Y208 and Y324
-# in "uncoupled"; both are in the G protein binding site that Figure 4c shows.
+# assays detect at very different rates, so at ~19 variants per position a cut of
+# >= 3 sits at a different multiple of the expected count in each of them, which
+# made the abundance-dependent split (destabilized vs not delivered) a function of
+# the threshold rather than of the biology. The rates are in docs/METHODS.md
+# section 5.
 POSITION_GATE = "mean"
 CUT, MINVAR = -2.0, 3
 _GCOL = {"A": ("abu", "abundance_z", "abundance_lfsr"),

@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Variant effects across the three phenotypes, and the five mechanism classes.
 
-Panel letters below are the ones on the assembled figure; they are added in
-Illustrator, so the axis variables here (axA..axD) are layout names, not letters.
+Panel letters below are manuscript Figure 3's, the ones on the assembled figure;
+they are added in Illustrator, so the axis variables here (axA..axD) are layout
+names, not letters. Panel a, the phenotype cascade schematic, is drawn by hand
+and is not produced here.
 
-  a  abundance vs surface, every missense variant   (axA)
-  b  cAMP vs surface, every missense variant        (axB)
+  b  abundance vs surface, every missense variant   (axA)
   c  GPCRdb snake, position class, with the colour key for the whole figure (axD)
-  d  the chain as a flow: all 528 positions through the three gates         (axC)
+  d  cAMP vs surface, every missense variant        (axB)
+  e  the chain as a flow: all 528 positions through the three gates         (axC)
 
-Units. Panels a and b are in **DMS effect score**, the quantity the assay
+Units. Panels b and d are in **DMS effect score**, the quantity the assay
 reports. The class cuts are at two synonymous SDs, which is a different raw value
 on each axis because each assay has its own synonymous spread:
 
@@ -18,40 +20,33 @@ on each axis because each assay has its own synonymous spread:
     surface   SD 0.2212   cut at -0.442
 
 so the dashed lines are drawn per axis rather than at a common number. Panels c
-and d are position-level and apply the same cuts to the position mean (the gate
+and e are position-level and apply the same cuts to the position mean (the gate
 rule is style.POSITION_GATE; docs/METHODS.md section 5 states the alternative
 that was rejected and why).
 
-Class rules. Variant (a, b): the `class` column of merged_variant_scores.tsv --
+Class rules. Variant (b, d): the `class` column of merged_variant_scores.tsv --
 cAMP and surface are cut first and abundance is consulted only to split
-destabilized from trafficking defect. Position (c, d): a gate is affected when the
+destabilized from trafficking defect. Position (c, e): a gate is affected when the
 position mean is past its cut, and the position takes the most upstream affected
 gate (abundance > surface > cAMP). The two rules share the five class names and
 colours, which is what the single key under the snake refers to; applied to the
 same unit they would disagree on 2.2 % of variants.
 
-LEGEND. The caption lives in figure_legends.md at the repository root; keep the two
-in step. The one trap it has to spell out: panel d labels PATHS, not classes, and the
+LEGEND. The caption lives with the manuscript, not in this repository; keep the two
+in step. The one trap it has to spell out: panel e labels PATHS, not classes, and the
 destabilized class is split across two of them. The ribbon reading "Destabilized (30)"
 is the (1,1,1) path; the other 2 destabilized positions take (1,1,0) -- they lose
 abundance and surface but keep cAMP -- and fall under min_label, so they are unlabelled.
 A reader who takes 30 as the class size is off by 2 against the position-class table
-printed below. The other thing worth stating is that a and b are coloured by the
-VARIANT rule while c and d use the POSITION rule; they share names and colours and
+printed below. The other thing worth stating is that b and d are coloured by the
+VARIANT rule while c and e use the POSITION rule; they share names and colours and
 would disagree on 2.2 % of variants applied to the same unit.
-
-Whether the assays really act in series is not argued here. It was tested
-separately by scripts/analysis/dag_model_test.py: abundance acts on cAMP only through
-surface (partial rho = +0.03, p = 0.49; adding abundance to a surface-only model
-of position-mean cAMP buys -0.02 out-of-fold R2), and the dependence of cAMP on
-surface is graded rather than a threshold (cAMP survives surface z -2 to -3 in
-68 % of variants, -3 to -5 in 26 %, below -5 in 3 %).
 """
 import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from style import *
 from scipy.stats import spearmanr
 
-# exact house palette (user swatch; gpr161_analysis/scripts/gpr161_style.py)
+# exact house palette (user swatch; scripts/qc/gpr161_style.py)
 RED, BLUE, PURPLE, GREEN = "#8F2924", "#4877B5", "#65159E", "#316B3E"
 GREY1, GREY2, GREY3, GREY4 = "#808180", "#979798", "#CDCECE", "#E2E2E2"
 COL = {"WT-like": GREY3, "uncoupled": RED, "trafficking defect": BLUE,

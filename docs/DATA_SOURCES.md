@@ -13,7 +13,9 @@ manager. ❓ = needs you (in-house method, or several papers could serve).
 ## 1. Software and methods used to produce this dataset
 
 The library, counts and scores in `data/` were generated for the accompanying paper;
-the tools below are cited as methods, not as sources of that data.
+the tools below are cited as methods, not as sources of that data. The landing-pad cell
+line and how the library was integrated are manuscript-methods detail and deliberately
+out of scope here.
 
 ### Library design and cloning — DIMPLE ✅
 The method the 11,043-variant oligo pool in `data/library/GPR161_oligos.csv` was designed
@@ -45,9 +47,8 @@ are committed at `pipeline/dumpling/`. Cite Rosace for the pipeline:
 > scanning analysis framework employing position and mean-variance shrinkage.
 > *Genome Biology* **25**, 138 (2024). doi:10.1186/s13059-024-03279-7
 
-**Record the Dumpling commit or release used** — it is not recoverable from the output
-files. Dumpling is cited here for read processing only: the scores in `data/scores/` come
-from Lilace, not from the Enrich2 or Rosace scoring the pipeline can also run.
+Dumpling is cited here for read processing only: the scores in `data/scores/` come from
+Lilace, not from the Enrich2 or Rosace scoring the pipeline can also run.
 
 ### Structure rendering — UCSF ChimeraX ⚠️
 
@@ -71,7 +72,7 @@ Versions are pinned in `requirements.txt`; cite as your journal requires.
 ## 2. External annotation shipped in `data/annotation/`
 
 ### `snakeplot_raw.svg` — GPCRdb snake-plot layout ✅
-The residue layout of the GPR161 topology diagram in Figure 2c. Retrieved
+The residue layout of the GPR161 topology diagram in manuscript Figure 3c. Retrieved
 **2026-09-08** by fetching <https://gpcrdb.org/protein/gp161_human/> and extracting the
 `<svg id="snakeplot">` element verbatim from the returned HTML (the few lines that did
 this are not part of this repository; the saved SVG is). Only the *layout* is GPCRdb's —
@@ -123,14 +124,21 @@ One row per distinct protein-level allele seen in human sequence data, used only
 Applying the figure's filters gives 593 gnomAD-PASS missense and 112 ClinVar missense,
 of which 587 and 111 have DMS scores — the n the figure reports.
 
-**Provenance.** Extracted from a larger clinical-variant crosswalk held in the analysis
-workspace, which joins gnomAD v4 and ClinVar records to the scan. That crosswalk is
-deliberately **not** redistributed here: it carries case-level clinical fields
-(case identifiers, disease category, zygosity, ClinGen points) that are not needed to
-redraw the figure. Only the five columns above were carried over. Where one allele
-appeared under several records, the sources are unioned, `gnomad_pass_any` is the OR,
-and the first non-null ClinVar classification is kept — a plain de-duplication would
-drop the ClinVar source for the ten alleles that appear twice.
+**Provenance.** This file is a **derived annotation file**, committed in full because it
+cannot be rebuilt from anything in this repository. It was extracted by
+`pipeline/04_human_alleles.py` from a larger clinical-variant crosswalk, which joins
+gnomAD v4 and ClinVar records to the scan. That crosswalk is deliberately **not**
+redistributed here: it carries case-level clinical fields (case identifiers, disease
+category, zygosity) that are not needed to redraw the figure. The script is committed so
+that the derivation is on the record, but it cannot run from a clone.
+
+Only the five columns above were carried over, and within `source` the clinical case
+identifiers were dropped: they point at individual patient records. The
+`literature_PMID…` tokens were kept, because they are the provenance of alleles the
+paper names and discusses. Where one allele appeared under several records, the sources
+are unioned, `gnomad_pass_any` is the OR, and the first non-null ClinVar classification
+is kept — a plain de-duplication would drop the ClinVar source for the ten alleles that
+appear twice.
 
 **Dates.** gnomAD v4 and the ClinVar snapshot used for the crosswalk; see the manuscript
 methods for the access dates. ❓ Confirm both before release.
@@ -146,12 +154,11 @@ same file.
 |---|---|---|---|
 | UniProt ✅ | **Q8N6U8** (human GPR161, 529 aa, sequence v1; entry v185 when retrieved — the entry version moves, the sequence version does not) | the position numbering of everything | UniProt Consortium. UniProt: the Universal Protein Knowledgebase in 2025. *NAR* **53**, D609-D617 (2025). doi:10.1093/nar/gkae1010 |
 | RefSeq / MANE ✅ | NP_001362812.1, NM_001375883.1 (the MANE Select pair; RefSeq labels it "transcript variant 12 / isoform 2" although it is byte-identical to UniProt canonical) | codon-level checks and cross-referencing clinical variants | O'Leary, N. A. et al. *NAR* **44**, D733-D745 (2016), doi:10.1093/nar/gkv1189 · Morales, J. et al. *Nature* **604**, 310-315 (2022), doi:10.1038/s41586-022-04558-8 |
-| PDB ✅ | **8SMV** (GPR161-Gs cryo-EM; chain R author numbering = UniProt; residues 28-220, 266-340 modelled) | structural interpretation, Gs-interface footprints | cite the entry *and* the paper below |
+| PDB ✅ | **8SMV** (GPR161-Gs cryo-EM; chain R author numbering = UniProt; residues 28-220, 266-340 modelled) | structural interpretation | cite the entry *and* the paper below |
 
 > Hoppe, N. *et al.* GPR161 structure uncovers the redundant role of sterol-regulated
 > ciliary cAMP signaling in the Hedgehog pathway. *Nature Structural & Molecular Biology*
-> **31**, 667-677 (2024). *(the source of 8SMV and of the published point mutants this
-> scan is benchmarked against)*
+> **31**, 667-677 (2024). *(the source of 8SMV)*
 
 ### `structure_8smv.tsv` — the DMS joined to 8SMV ⚠️
 
@@ -160,51 +167,19 @@ files above: `segment` and `generic` are copied from GPCRdb, `modeled` is whethe
 R has coordinates for that residue, and `dist_gs` is the minimum heavy-atom distance to
 the G protein heterotrimer. 18 positions come within 4.5 A.
 
-**Removed 2026-10-28.** This table used to carry `dsasa_gs` (surface area buried on Gs
-binding, from a [topos](https://github.com/Wankowicz-Lab/topos) run on 8SMV) and the
-22-position `gs_footprint` derived from it. The manuscript does not use either, and the
-column was the only thing in this repository read from an absolute path outside it, so
-both were dropped. The structural statements in the paper rest on `dist_gs` and on the
-per-position effect sizes, not on buried area.
-
 ---
 
-## 4. Still needed from you ❓
+## 4. Resources cited by the paper but not needed to rebuild this repository
 
-These are used by the experiment but could not be cited from the files alone. They are
-listed here so nothing is silently uncited in the manuscript.
-
-1. **The CRE-eGFP cAMP transcriptional reporter** — original source.
-2. **The split-mNeonGreen whole-cell abundance reporter** — original source.
-3. **The tagging construct** — the paper to cite for it. Its architecture is already
-   documented in `docs/METHODS.md` §1, read out of
-   `pipeline/dumpling/GPR161_LP_ref.fasta`.
-4. **The Dumpling commit or release** used for `data/counts/` (see §1). The configuration
-   itself is committed at `pipeline/dumpling/GPR161.yaml`.
-5. **The Lilace version and invocation** used for `data/scores/` (see
-   `docs/METHODS.md` §4).
-
-The landing-pad cell line and how the library was integrated are manuscript-methods
-detail and deliberately out of scope here.
-
----
-
-## 5. Resources used elsewhere in the GPR161 analysis
-
-Not needed to rebuild anything in this repository, but used in analyses that feed the
-other figures of the paper. Listed so the reference list can be assembled in one pass.
+None of these is read by any script here. They are listed so the reference list can be
+assembled in one pass.
 
 | resource | used for | citation |
 |---|---|---|
-| AlphaFold DB (Q8N6U8) ⚠️ | structural rendering of positions outside 8SMV's modelled range | Jumper et al. *Nature* 596, 583-589 (2021); Varadi et al. *NAR* 52, D368-D375 (2024) |
-| gnomAD v4.1 ⚠️ | population variants, pLoF alleles, constraint | Chen, S. et al. *Nature* **625**, 92-100 (2024) — note this paper describes **v4**; v4.1 is a re-release of the same callset with no paper of its own, so cite the paper and state the version separately |
+| gnomAD v4.1 ⚠️ | population variants (Figure 5) | Chen, S. et al. *Nature* **625**, 92-100 (2024) — note this paper describes **v4**; v4.1 is a re-release of the same callset with no paper of its own, so cite the paper and state the version separately |
 | ClinVar ⚠️ | clinical variant records | Landrum, M. J. et al. *NAR* **48**, D835-D844 (2020) |
-| ClinGen ⚠️ | curated gene-disease assertions | Rehm, H. L. et al. *NEJM* **372**, 2235-2242 (2015) |
-| AlphaMissense ✅ | predictor benchmark | Cheng, J. et al. *Science* **381**, eadg7492 (2023) |
-| ESM-1v / ESM-2 ⚠️ | zero-shot variant-effect predictions | Meier, J. et al. *NeurIPS* **34** (2021); Lin, Z. et al. *Science* **379**, 1123-1130 (2023) |
-| Ensembl VEP ⚠️ | variant consequence mapping | McLaren, W. et al. *Genome Biology* **17**, 122 (2016) |
 | MaveDB ⚠️ | intended deposit for these scores | Esposito, D. et al. *Genome Biology* **20**, 223 (2019) |
-| Prior GPCR DMS used for comparison ✅ | β2AR: Jones, E. M. et al. *eLife* **9**, e54895 (2020) · MC4R: Howard, C. J. et al. *eLife* **13** (2025) · GPCRome survey: Tedman, A. et al. *Nat. Commun.* (2026), doi:10.1038/s41467-026-76564-7 | |
+| Prior GPCR DMS ✅ | cited as earlier GPCR mutational scans; the Tedman surface-expression values are the x axis of Supplemental Figure 1f against basal cAMP | β2AR: Jones, E. M. et al. *eLife* **9**, e54895 (2020) · MC4R: Howard, C. J. et al. *eLife* **13** (2025) · GPCRome survey: Tedman, A. et al. *Nat. Commun.* (2026), doi:10.1038/s41467-026-76564-7 |
 
 GPR161 biology background used in the introduction (all verified against the proposal's
 reference list): Mukhopadhyay et al. *Cell* **152**, 210-223 (2013); Hwang et al. *eLife*

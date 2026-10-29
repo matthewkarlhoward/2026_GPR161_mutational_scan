@@ -7,9 +7,8 @@ export.
 
 ## Manuscript figure → script
 
-Headings below for Figures 4 and 5 use the manuscript's numbers. The first two
-sections still carry this repository's older internal numbering, which is one less
-than the manuscript's. Use this table to go from the paper to the code.
+Every figure number and panel letter in this document is the manuscript's. Use this
+table to go from the paper to the code.
 
 | manuscript | this repo draws | script | output |
 |---|---|---|---|
@@ -28,7 +27,7 @@ Figure 4 panels a and c are ChimeraX renders made by hand from
 
 ---
 
-## Figure 1 — the platform and the landscape
+## Figure 2 — the platform and the landscape
 
 | panel | content | built by |
 |---|---|---|
@@ -48,37 +47,34 @@ Details that matter for the caption:
   them deep loss.
 - Missing variants appear as white gaps (94 designed variants were never observed).
 
-## Figure 2 — three phenotypes, five mechanism classes
+## Figure 3 — three phenotypes, five mechanism classes
 
-All four panels come from one script, `scripts/fig2_phenotype_classes.py` →
+All four data panels come from one script, `scripts/fig2_phenotype_classes.py` →
 `figures/phenotype_classes.pdf` (**165 × 92 mm**). It reads
 `data/processed/merged_variant_scores.tsv` and `data/processed/position_summary.tsv`, and
 the snake-plot layout from `data/annotation/snakeplot_raw.svg`.
 
 | panel | content | note |
 |---|---|---|
-| **a** | abundance vs surface, all 9,927 missense variants, coloured by class | ρ = +0.63 |
-| **b** | cAMP vs surface, same variants | ρ = +0.66 |
+| **a** | phenotype cascade schematic | **drawn by hand** (Illustrator), no code |
+| **b** | abundance vs surface, all 9,927 missense variants, coloured by class | ρ = +0.63 |
 | **c** | GPCRdb snake plot coloured by **position** class | layout from GPCRdb, colours from this study |
-| **d** | all 528 positions flowing through the three gates | ribbon width = positions |
+| **d** | cAMP vs surface, same variants | ρ = +0.66 |
+| **e** | all 528 positions flowing through the three gates | ribbon width = positions |
 
 - Surface is on the x axis in **both** scatters because it is the shared reference the
-  classes are cut against. Panel a plots abundance (upstream of surface) on y: it is a
+  classes are cut against. Panel b plots abundance (upstream of surface) on y: it is a
   threshold map, not a regression, so no direction is implied.
 - The dashed lines are **two synonymous SDs of each axis's own assay**, so they sit at a
   different raw value on every axis: cAMP -0.372, abundance -0.338, surface -0.442.
-- Panels a,b use the **variant-level** class rule; c,d use the **position-level** rule.
+- Panels b,d use the **variant-level** class rule; c,e use the **position-level** rule.
   They share names and colours but are not the same rule — see `docs/METHODS.md` §5.
 - The script prints the full class and path tables, plus ready-made caption text, when it
   runs.
 
-The chain order of the Sankey (abundance → surface → cAMP) is a claim that was tested
-separately rather than asserted by the figure; the result is summarised in
-`docs/METHODS.md` §5 and its code is `scripts/analysis/dag_model_test.py`.
-
 ---
 
-## Figure 4 (manuscript) — the scan on the structure
+## Figure 4 — the scan on the structure
 
 **Only panel b is drawn here.** `scripts/fig3_structure.py` →
 `figures/segment_effects.pdf` (**50 × 40 mm**). It reads
@@ -97,8 +93,7 @@ Panels a and c were rendered and labelled by hand from `data/structure/8smv.cif`
 coloured by the per-position surface and cAMP values in
 `data/processed/position_summary.tsv` (`surf`, `cre`, `resid`), applied as residue
 attributes in a ChimeraX session kept with the manuscript figures. Neither the session
-nor the render images is deposited. An earlier draft assembled all three panels in matplotlib from
-a `figures/renders/` folder — that code and that folder were removed on 2026-10-28.
+nor the render images is deposited.
 
 Details that matter for the caption:
 
@@ -119,13 +114,11 @@ Details that matter for the caption:
   and the figure declines to colour it. All ten uncoupled positions are outside the mask
   by construction — that class requires the surface gate to be spared.
 - Panel c shows **Gαs only**. Gβ, Gγ and the Nb35 nanobody are deleted. The interface
-  number this repository can still state is **18 positions within 4.5 Å** (`dist_gs`);
-  the buried-area footprint was removed with the dSASA column on 2026-10-28, see
-  `DATA_SOURCES.md`.
+  number this repository states is **18 positions within 4.5 Å** (`dist_gs`).
 
 ---
 
-## Figure 5 (manuscript) — human variant interpretation
+## Figure 5 — human variant interpretation
 
 One script, `scripts/fig4_human_variants.py` → `figures/human_variants.pdf`. Reads
 `data/processed/merged_variant_scores.tsv` and `data/annotation/human_alleles.tsv`.
@@ -154,7 +147,7 @@ Two things a caption has to state:
 Solid line at 0 is no effect; the dashed line is the loss-of-function cut at two
 synonymous SDs (z = −2). No panel letters are drawn; they are added in Illustrator.
 
-## Supplementary figure — library and sequencing QC
+## Supplemental Figure 3 — library and sequencing QC
 
 `scripts/qc/dms_qc_panel.py` draws panels a-d as a single **165 × 30 mm** row
 (`figures/F_QC_panel.pdf`). It reuses the loaders in `dms_qc_coverage.py` and

@@ -22,14 +22,12 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23682577
     description: Concept DOI - always resolves to the latest version
-  - type: doi
-    value: 10.5281/zenodo.23754402
-    description: Version DOI for v0.2.0
 license:
   - MIT
   - CC-BY-4.0
-# v1.0.0 is reserved for the version submitted with the manuscript; see docs/RELEASING.md
-version: 0.2.0
+# 3.0.0 is the version submitted with the manuscript, and is shared with the companion
+# repository 2026_GPCRome_basal_cAMP; see docs/RELEASING.md
+version: 3.0.0
 date-released: '2026-10-28'
 keywords:
   - deep mutational scanning

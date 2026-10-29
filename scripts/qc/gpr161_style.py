@@ -18,7 +18,7 @@ from pathlib import Path
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
-from matplotlib.colors import LinearSegmentedColormap, ListedColormap
+from matplotlib.colors import LinearSegmentedColormap
 
 MM = 1 / 25.4
 MAX_W_MM, MAX_H_MM = 165.0, 180.0
@@ -39,40 +39,22 @@ LAVENDER = "#9A8BD0"
 GREEN = "#316B3E"
 ROSE = "#DBB8AB"        # pastel of RED
 PALEBLUE = "#CCD5EF"    # pastel of BLUE
-PALEPURPLE = "#F0EAF9"  # pastel of PURPLE
-PALELAV = "#F5F3FB"     # pastel of LAVENDER
 WHITE = "#FFFFFF"       # use with a black 0.5 pt edge
 
-GREYS = [BLACK, GREY1, GREY2, GREY3, GREY4, GREY5]
 CATEGORICAL = [BLACK, RED, BLUE, PURPLE, GREEN, LAVENDER, GREY2]
 
 # Semantic mapping used across all figures (keep consistent):
-#   loss / decrease  -> BLUE family;  gain / increase -> RED family
+#   loss / decrease  -> RED family;  gain / increase -> BLUE family. This is the
+#   sense of the main-figure heatmaps (scripts/style.py: RED_LOF, BLUE_GOF) and
+#   the reverse of the blue-is-loss convention used in some earlier drafts.
 #   cAMP assay -> BLACK, surface -> BLUE, abundance -> GREEN (when assays are overlaid)
-#   signaling-selective LOF -> PURPLE, selective GOF -> RED, pan-LOF -> GREY1,
-#   WT-like -> GREY3, other/uncertain -> GREY5
-#   structural sets: Gs interface -> PURPLE, sterol site -> GREEN, ECL2 -> RED
+#   mechanism classes: uncoupled -> RED, trafficking defect -> BLUE,
+#   destabilized -> PURPLE, surface-loss only -> GREEN, WT-like -> GREY3
 #   missing data -> hatched / GREY4 with no fill colour
-ASSAY_COLORS = {"camp": BLACK, "surface": BLUE, "abundance": GREEN}
-CLASS_COLORS = {
-    "candidate_signaling_selective_LOF": PURPLE,
-    "candidate_signaling_selective_GOF": RED,
-    "pan_LOF": GREY1,
-    "surface_depleted": BLUE,
-    "abundance_depleted": GREEN,
-    "wt_like": GREY3,
-    "discordant_other": LAVENDER,
-    "uncertain": GREY5,
-}
-HIGHLIGHT = {"GPR3": BLUE, "GPR6": GREEN, "GPR12": LAVENDER, "GPR161": RED}
 
-# Diverging map for effects: blue (loss) - white - red (gain)
+# Diverging map, BLUE at the low end through white to RED at the high end.
 DIVERGING = LinearSegmentedColormap.from_list(
     "gpr161_div", [BLUE, PALEBLUE, WHITE, ROSE, RED], N=256)
-# Sequential maps
-SEQ_PURPLE = LinearSegmentedColormap.from_list("gpr161_seq_purple", [WHITE, PALEPURPLE, LAVENDER, PURPLE], N=256)
-SEQ_GREY = LinearSegmentedColormap.from_list("gpr161_seq_grey", [WHITE, GREY4, GREY2, BLACK], N=256)
-MISSING_COLOR = GREY4
 
 
 def _register_helvetica():
@@ -138,8 +120,6 @@ def apply():
     })
     try:
         mpl.colormaps.register(DIVERGING)
-        mpl.colormaps.register(SEQ_PURPLE)
-        mpl.colormaps.register(SEQ_GREY)
     except ValueError:
         pass  # already registered
 

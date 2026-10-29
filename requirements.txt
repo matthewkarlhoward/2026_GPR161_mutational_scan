@@ -9,5 +9,3 @@ scipy==1.17.1
 matplotlib==3.10.8
 pillow==12.1.1
 gemmi==0.7.5          # reads 8SMV; pipeline/03 only
-statsmodels==0.14.4   # LOWESS, scripts/analysis/dag_model_test.py only
-scikit-learn==1.7.2   # KFold + gradient boosting, same script only

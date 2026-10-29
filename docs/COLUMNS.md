@@ -83,7 +83,6 @@ Built by `pipeline/02_position_summary.py`. One row per assayed position (528).
 | `n` | missense variants measured there (16-19) |
 | `cre`, `abu`, `surf` | position mean of missense z, per assay |
 | `resid` | coupling residual: position mean of `cre_z - (-0.074695 + 0.631158·surface_z)` |
-| `resid_z` | `resid / (0.8423 / √n)`; 0.8423 is the synonymous SD of the same residual |
 | `bw` | GPCRdb generic number where it has one (243 of 528 positions); mostly but not only helix Ballesteros-Weinstein numbers, and 27 TM2 entries are the literal string `TM2` — see `METHODS.md` §5 |
 
 ## `data/annotation/gpcrdb_generic_numbers.tsv`

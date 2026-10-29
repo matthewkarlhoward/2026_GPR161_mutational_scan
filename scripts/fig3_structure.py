@@ -120,9 +120,7 @@ def main():
     # Figure 4 panels a and c are ChimeraX renders made by hand from
     # data/structure/8smv.cif coloured by the per-position values in
     # data/processed/position_summary.tsv. The repository therefore
-    # contributes only panel b. The earlier in-script render assembly needed a
-    # figures/renders/ folder of PNGs that is not part of the deposit, so it was
-    # dropped 2026-10-28 rather than left to fail.
+    # contributes only panel b.
     BW, BH = 50.0, 40.0
     build("segment_effects", BW, BH,
           lambda fig, W, H, mm: panel_segments(fig, W, H, mm, seg))
