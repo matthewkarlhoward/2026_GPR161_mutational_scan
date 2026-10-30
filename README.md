@@ -26,9 +26,7 @@ table, the QC tables and every data panel of the figures.
 | **Variant effect scores** | MaveDB experiment set [urn:mavedb:00001323](https://www.mavedb.org/experiment-sets/urn:mavedb:00001323), published 2026-10-30, CC BY 4.0 |
 | **Code, counts, processed tables, figures** | this repository, archived on Zenodo at [10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577) |
 
-One MaveDB score set per assay, and **the suffix order is not the order the assays are
-listed in anywhere else in this repository** — check the URN against the assay, not
-against its position in a list:
+One score set per assay:
 
 | assay | score set | variants |
 |---|---|---|
@@ -40,11 +38,6 @@ Those are the same Lilace scores as `data/scores/`, re-expressed in MaveDB's HGV
 syntax; the variant counts above match the three files row for row. The three assays
 differ in how many variants they recovered, which is why the merged table in
 `data/processed/` — an inner join across all three — is shorter than any of them.
-
-The pooled GPCRome basal-cAMP screen that accompanies this work is deposited separately:
-BioProject [PRJNA1551037](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551037), code and
-scores at <https://github.com/matthewkarlhoward/2026_GPCRome_basal_cAMP> and
-[10.5281/zenodo.23682602](https://doi.org/10.5281/zenodo.23682602).
 
 ---
 
