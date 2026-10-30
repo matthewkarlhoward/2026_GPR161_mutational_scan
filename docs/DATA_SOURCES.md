@@ -178,7 +178,7 @@ assembled in one pass.
 |---|---|---|
 | gnomAD v4.1 ⚠️ | population variants (Figure 5) | Chen, S. et al. *Nature* **625**, 92-100 (2024) — note this paper describes **v4**; v4.1 is a re-release of the same callset with no paper of its own, so cite the paper and state the version separately |
 | ClinVar ⚠️ | clinical variant records | Landrum, M. J. et al. *NAR* **48**, D835-D844 (2020) |
-| MaveDB ⚠️ | intended deposit for these scores | Esposito, D. et al. *Genome Biology* **20**, 223 (2019) |
+| MaveDB ✅ | where these scores are deposited — experiment set urn:mavedb:00001323, one score set per assay (**-a-1 abundance, -b-1 surface, -c-1 cAMP**), published 2026-10-30 under CC BY 4.0 | Esposito, D. et al. *Genome Biology* **20**, 223 (2019) |
 | Prior GPCR DMS ✅ | cited as earlier GPCR mutational scans; the Tedman surface-expression values are the x axis of Supplemental Figure 1f against basal cAMP | β2AR: Jones, E. M. et al. *eLife* **9**, e54895 (2020) · MC4R: Howard, C. J. et al. *eLife* **13** (2025) · GPCRome survey: Tedman, A. et al. *Nat. Commun.* (2026), doi:10.1038/s41467-026-76564-7 |
 
 GPR161 biology background used in the introduction (all verified against the proposal's

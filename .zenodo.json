@@ -27,6 +27,31 @@
       "resource_type": "software"
     },
     {
+      "identifier": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551518",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.mavedb.org/score-sets/urn:mavedb:00001323-a-1",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.mavedb.org/score-sets/urn:mavedb:00001323-b-1",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.mavedb.org/score-sets/urn:mavedb:00001323-c-1",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.23682602",
+      "relation": "references",
+      "resource_type": "software"
+    },
+    {
       "identifier": "10.1186/s13059-026-03934-1",
       "relation": "cites",
       "resource_type": "publication-article"

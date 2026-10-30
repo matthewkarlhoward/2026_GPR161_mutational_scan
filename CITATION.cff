@@ -25,6 +25,18 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23755947
     description: Version DOI for v3.0.0
+  - type: url
+    value: https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551518
+    description: NCBI BioProject - the raw sequencing reads behind data/counts/
+  - type: other
+    value: urn:mavedb:00001323-a-1
+    description: MaveDB score set - whole-cell abundance
+  - type: other
+    value: urn:mavedb:00001323-b-1
+    description: MaveDB score set - cell-surface expression
+  - type: other
+    value: urn:mavedb:00001323-c-1
+    description: MaveDB score set - basal cAMP signalling
 license:
   - MIT
   - CC-BY-4.0

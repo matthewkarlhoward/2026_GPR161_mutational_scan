@@ -18,6 +18,36 @@ table, the QC tables and every data panel of the figures.
 
 ---
 
+## Data availability
+
+| what | where |
+|---|---|
+| **Raw sequencing reads** | NCBI SRA, BioProject [PRJNA1551518](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551518) — 39 runs. Not committed here; `data/counts/` is the first committed artefact. |
+| **Variant effect scores** | MaveDB experiment set [urn:mavedb:00001323](https://www.mavedb.org/experiment-sets/urn:mavedb:00001323), published 2026-10-30, CC BY 4.0 |
+| **Code, counts, processed tables, figures** | this repository, archived on Zenodo at [10.5281/zenodo.23682577](https://doi.org/10.5281/zenodo.23682577) |
+
+One MaveDB score set per assay, and **the suffix order is not the order the assays are
+listed in anywhere else in this repository** — check the URN against the assay, not
+against its position in a list:
+
+| assay | score set | variants |
+|---|---|---|
+| whole-cell abundance | [urn:mavedb:00001323-a-1](https://www.mavedb.org/score-sets/urn:mavedb:00001323-a-1) | 10,954 |
+| cell-surface expression | [urn:mavedb:00001323-b-1](https://www.mavedb.org/score-sets/urn:mavedb:00001323-b-1) | 10,968 |
+| basal cAMP signalling | [urn:mavedb:00001323-c-1](https://www.mavedb.org/score-sets/urn:mavedb:00001323-c-1) | 10,973 |
+
+Those are the same Lilace scores as `data/scores/`, re-expressed in MaveDB's HGVS variant
+syntax; the variant counts above match the three files row for row. The three assays
+differ in how many variants they recovered, which is why the merged table in
+`data/processed/` — an inner join across all three — is shorter than any of them.
+
+The pooled GPCRome basal-cAMP screen that accompanies this work is deposited separately:
+BioProject [PRJNA1551037](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1551037), code and
+scores at <https://github.com/matthewkarlhoward/2026_GPCRome_basal_cAMP> and
+[10.5281/zenodo.23682602](https://doi.org/10.5281/zenodo.23682602).
+
+---
+
 ## Repository layout
 
 ```

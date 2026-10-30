@@ -76,4 +76,8 @@ If you would rather the record itself read MIT, change that one field.
       numbers — is resolved
 - [ ] `related_identifiers` in `.zenodo.json` gains the paper's DOI with
       `"relation": "isSupplementTo"` once it exists
-- [ ] scores are deposited in MaveDB and that accession is cross-referenced here
+- [x] scores are deposited in MaveDB and the accessions are cross-referenced in
+      `README.md` and `.zenodo.json` — experiment set urn:mavedb:00001323, published
+      2026-10-30: **-a-1 abundance, -b-1 surface, -c-1 cAMP**. That suffix order is not
+      the order the assays appear anywhere else here, so check the URN against the
+      assay rather than against its position in a list.
