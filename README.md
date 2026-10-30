@@ -2,11 +2,16 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23682577.svg)](https://doi.org/10.5281/zenodo.23682577)
 
-Code and data for the GPR161 saturation mutagenesis study. A library built for this work
-with the DIMPLE method carries **11,043 designed variants** across **528 positions**
-(missense, synonymous and single-residue deletions), read out in **three parallel FACS
-assays** — cell-surface expression, whole-cell abundance, and basal cAMP signalling — in
-HEK293T cells.
+**Mapping the sequence determinants of constitutive activity in GPCRs.**
+Howard MK, Whiteman S, Rockefeller Grimes P, Macdonald C, Manglik A &
+Coyote-Maestas W (2026).
+[Read the paper](https://matthewkhoward.com/Howard_2026_GPR161_constitutive_activity.pdf) (PDF).
+
+Code and data for the GPR161 saturation mutagenesis study in that paper. A library
+built for this work with the DIMPLE method carries **11,043 designed variants** across
+**528 positions** (missense, synonymous and single-residue deletions), read out in
+**three parallel FACS assays** — cell-surface expression, whole-cell abundance, and basal
+cAMP signalling — in HEK293T cells.
 
 Everything here rebuilds from the files in `data/`: the variant tables, the position
 table, the QC tables and every data panel of the figures.
